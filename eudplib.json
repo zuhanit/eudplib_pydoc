@@ -1,0 +1,6350 @@
+{
+    "Accumulate": {
+        "args": [
+            "Player",
+            "Comparison",
+            "Number",
+            "ResourceType"
+        ],
+        "doc": null
+    },
+    "AddCurrentPlayer": {
+        "args": [
+            "p"
+        ],
+        "doc": null
+    },
+    "Always": {
+        "args": [],
+        "doc": null
+    },
+    "Assignable2List": {
+        "args": [
+            "a"
+        ],
+        "doc": null
+    },
+    "Bring": {
+        "args": [
+            "Player",
+            "Comparison",
+            "Number",
+            "Unit",
+            "Location"
+        ],
+        "doc": null
+    },
+    "CenterView": {
+        "args": [
+            "Where"
+        ],
+        "doc": null
+    },
+    "Command": {
+        "args": [
+            "Player",
+            "Comparison",
+            "Number",
+            "Unit"
+        ],
+        "doc": "[Player] commands [Comparison] [Number] [Unit].\n\n    Example::\n        Command(Player1, AtLeast, 30, \"Terran Marine\")\n\n\n    "
+    },
+    "CommandLeast": {
+        "args": [
+            "Unit"
+        ],
+        "doc": null
+    },
+    "CommandLeastAt": {
+        "args": [
+            "Unit",
+            "Location"
+        ],
+        "doc": null
+    },
+    "CommandMost": {
+        "args": [
+            "Unit"
+        ],
+        "doc": null
+    },
+    "CommandMostAt": {
+        "args": [
+            "Unit",
+            "Location"
+        ],
+        "doc": null
+    },
+    "Comment": {
+        "args": [
+            "Text"
+        ],
+        "doc": null
+    },
+    "CompressPayload": {
+        "args": [
+            "mode"
+        ],
+        "doc": " Set payload compression mode.\n\n    :param mode: If true, enable object stacking (compression). If false,\n    disable it.\n    "
+    },
+    "CountdownTimer": {
+        "args": [
+            "Comparison",
+            "Time"
+        ],
+        "doc": "Checks countdown timer.\n\n    Example::\n\n        CountdownTimer(AtLeast, 10)\n\n    Memory Layout::\n\n        0000 0000 0000 0000 TTTT TTTT 0000 CP01 0000\n\n        T : Time, CP : Comparison.\n    "
+    },
+    "CreatePayload": {
+        "args": [
+            "root"
+        ],
+        "doc": null
+    },
+    "CreateUnit": {
+        "args": [
+            "Number",
+            "Unit",
+            "Where",
+            "ForPlayer"
+        ],
+        "doc": null
+    },
+    "CreateUnitWithProperties": {
+        "args": [
+            "Count",
+            "Unit",
+            "Where",
+            "Player",
+            "Properties"
+        ],
+        "doc": null
+    },
+    "Deaths": {
+        "args": [
+            "Player",
+            "Comparison",
+            "Number",
+            "Unit"
+        ],
+        "doc": null
+    },
+    "DeathsX": {
+        "args": [
+            "Player",
+            "Comparison",
+            "Number",
+            "Unit",
+            "Mask"
+        ],
+        "doc": null
+    },
+    "Defeat": {
+        "args": [],
+        "doc": null
+    },
+    "Disabled": {
+        "args": [
+            "arg"
+        ],
+        "doc": "Disable condition or action"
+    },
+    "DisplayText": {
+        "args": [
+            "Text",
+            "AlwaysDisplay"
+        ],
+        "doc": null
+    },
+    "DoActions": {
+        "args": [],
+        "doc": null
+    },
+    "Draw": {
+        "args": [],
+        "doc": null
+    },
+    "EPD": {
+        "args": [
+            "p"
+        ],
+        "doc": null
+    },
+    "EPS_SetDebug": {
+        "args": [
+            "b"
+        ],
+        "doc": null
+    },
+    "EP_SetRValueStrictMode": {
+        "args": [
+            "mode"
+        ],
+        "doc": null
+    },
+    "EUDAnd": {
+        "args": [
+            "cond1"
+        ],
+        "doc": " cond1 && cond2 && ... && condn\n\n    .. note::\n        This function computes AND value of various conditions.\n        If you don't want to do much computation, you should better use\n        plain list instead of this function.\n\n    .. warning:: Short circuiting is not supported.\n\n    :param conds: List of conditions\n    "
+    },
+    "EUDBinaryMax": {
+        "args": [
+            "cond",
+            "minv",
+            "maxv"
+        ],
+        "doc": " Find maximum x satisfying cond(x) using binary search\n\n    :param cond: Test condition\n    :param minv: Minimum value in domain\n    :param maxv: Maximum value in domain\n\n    Cond should be binary classifier, meaning that for some N\n        for all x > N, cond(x) is false.\n        for all x <= N, cond(x) is true\n    Then EUDBinaryMin will find such N.\n\n    .. note:: If none of the value satisfies condition, then this\n        function will return maxv.\n    "
+    },
+    "EUDBinaryMin": {
+        "args": [
+            "cond",
+            "minv",
+            "maxv"
+        ],
+        "doc": " Find minimum x satisfying cond(x) using binary search\n\n    :param cond: Test condition\n    :param minv: Minimum value in domain\n    :param maxv: Maximum value in domain\n\n    Cond should be binary classifier, meaning that for some N\n        for all x < N, cond(x) is false.\n        for all x >= N, cond(x) is true\n    Then EUDBinaryMin will find such N\n\n    .. note:: If none of the value satisfies condition, then this\n        function will return maxv.\n    "
+    },
+    "EUDBranch": {
+        "args": [
+            "conditions",
+            "ontrue",
+            "onfalse"
+        ],
+        "doc": "Branch by whether conditions is satisfied or not.\n\n    :param conditions: Nested list of conditions.\n    :param ontrue: When all conditions are true, this branch is taken.\n    :param onfalse: When any of the conditions are false, this branch is taken.\n    "
+    },
+    "EUDBreak": {
+        "args": [],
+        "doc": null
+    },
+    "EUDBreakIf": {
+        "args": [
+            "conditions"
+        ],
+        "doc": null
+    },
+    "EUDBreakIfNot": {
+        "args": [
+            "conditions"
+        ],
+        "doc": null
+    },
+    "EUDClearNamespace": {
+        "args": [],
+        "doc": null
+    },
+    "EUDContinue": {
+        "args": [],
+        "doc": null
+    },
+    "EUDContinueIf": {
+        "args": [
+            "conditions"
+        ],
+        "doc": null
+    },
+    "EUDContinueIfNot": {
+        "args": [
+            "conditions"
+        ],
+        "doc": null
+    },
+    "EUDCreateBlock": {
+        "args": [
+            "name",
+            "userdata"
+        ],
+        "doc": null
+    },
+    "EUDCreateVariables": {
+        "args": [
+            "varn"
+        ],
+        "doc": null
+    },
+    "EUDDoEvents": {
+        "args": [],
+        "doc": null
+    },
+    "EUDElse": {
+        "args": [],
+        "doc": null
+    },
+    "EUDElseIf": {
+        "args": [],
+        "doc": null
+    },
+    "EUDElseIfNot": {
+        "args": [],
+        "doc": null
+    },
+    "EUDEndExecuteOnce": {
+        "args": [],
+        "doc": null
+    },
+    "EUDEndIf": {
+        "args": [],
+        "doc": null
+    },
+    "EUDEndInfLoop": {
+        "args": [],
+        "doc": null
+    },
+    "EUDEndLoopN": {
+        "args": [],
+        "doc": null
+    },
+    "EUDEndPlayerLoop": {
+        "args": [],
+        "doc": null
+    },
+    "EUDEndSwitch": {
+        "args": [],
+        "doc": null
+    },
+    "EUDEndWhile": {
+        "args": [],
+        "doc": null
+    },
+    "EUDExecuteOnce": {
+        "args": [],
+        "doc": null
+    },
+    "EUDFunc": {
+        "args": [
+            "fdecl_func"
+        ],
+        "doc": null
+    },
+    "EUDFuncPtr": {
+        "args": [
+            "argn",
+            "retn"
+        ],
+        "doc": null
+    },
+    "EUDGetBlockList": {
+        "args": [],
+        "doc": null
+    },
+    "EUDGetLastBlock": {
+        "args": [],
+        "doc": null
+    },
+    "EUDGetLastBlockOfName": {
+        "args": [
+            "name"
+        ],
+        "doc": null
+    },
+    "EUDIf": {
+        "args": [],
+        "doc": null
+    },
+    "EUDIfNot": {
+        "args": [],
+        "doc": null
+    },
+    "EUDInfLoop": {
+        "args": [],
+        "doc": null
+    },
+    "EUDIsContinuePointSet": {
+        "args": [],
+        "doc": null
+    },
+    "EUDJump": {
+        "args": [
+            "nextptr"
+        ],
+        "doc": null
+    },
+    "EUDJumpIf": {
+        "args": [
+            "conditions",
+            "ontrue"
+        ],
+        "doc": null
+    },
+    "EUDJumpIfNot": {
+        "args": [
+            "conditions",
+            "onfalse"
+        ],
+        "doc": null
+    },
+    "EUDLoopBullet": {
+        "args": [],
+        "doc": null
+    },
+    "EUDLoopList": {
+        "args": [
+            "header_offset",
+            "break_offset"
+        ],
+        "doc": null
+    },
+    "EUDLoopN": {
+        "args": [],
+        "doc": null
+    },
+    "EUDLoopNewUnit": {
+        "args": [
+            "allowance"
+        ],
+        "doc": null
+    },
+    "EUDLoopPlayer": {
+        "args": [
+            "ptype",
+            "force",
+            "race"
+        ],
+        "doc": null
+    },
+    "EUDLoopPlayerUnit": {
+        "args": [
+            "player"
+        ],
+        "doc": null
+    },
+    "EUDLoopRange": {
+        "args": [
+            "start",
+            "end"
+        ],
+        "doc": null
+    },
+    "EUDLoopSprite": {
+        "args": [],
+        "doc": null
+    },
+    "EUDLoopTrigger": {
+        "args": [
+            "player"
+        ],
+        "doc": null
+    },
+    "EUDLoopUnit": {
+        "args": [],
+        "doc": null
+    },
+    "EUDLoopUnit2": {
+        "args": [],
+        "doc": "EUDLoopUnit\ubcf4\ub2e4 \uc57d\uac04? \ube60\ub985\ub2c8\ub2e4. \uc720\ub2db \ub9ac\uc2a4\ud2b8\ub97c \ub530\ub77c\uac00\uc9c0 \uc54a\uace0\n    1700\uac1c \uc720\ub2db\uc744 \ub3c4\ub294 \ubc29\uc2dd\uc73c\ub85c \uc791\ub3d9\ud569\ub2c8\ub2e4.\n    "
+    },
+    "EUDMethod": {
+        "args": [
+            "method"
+        ],
+        "doc": null
+    },
+    "EUDNot": {
+        "args": [
+            "cond"
+        ],
+        "doc": " !cond\n\n    :param conds: Condition to negate\n    "
+    },
+    "EUDOnStart": {
+        "args": [
+            "func"
+        ],
+        "doc": null
+    },
+    "EUDOr": {
+        "args": [
+            "cond1"
+        ],
+        "doc": " cond1 || cond2 || ... || condn\n\n    .. warning:: Short circuiting is not supported\n\n    :param conds: List of conditions\n    "
+    },
+    "EUDPeekBlock": {
+        "args": [
+            "name"
+        ],
+        "doc": null
+    },
+    "EUDPlayerLoop": {
+        "args": [],
+        "doc": null
+    },
+    "EUDPopBlock": {
+        "args": [
+            "name"
+        ],
+        "doc": null
+    },
+    "EUDRegisterObjectToNamespace": {
+        "args": [
+            "funcname",
+            "obj"
+        ],
+        "doc": " Register object to inline code namespace. "
+    },
+    "EUDRegistered": {
+        "args": [
+            "func"
+        ],
+        "doc": " Decoreator for registering class / function. "
+    },
+    "EUDReturn": {
+        "args": [],
+        "doc": null
+    },
+    "EUDSetContinuePoint": {
+        "args": [],
+        "doc": null
+    },
+    "EUDStack": {
+        "args": [
+            "basetype"
+        ],
+        "doc": null
+    },
+    "EUDSwitch": {
+        "args": [
+            "var"
+        ],
+        "doc": null
+    },
+    "EUDSwitchCase": {
+        "args": [],
+        "doc": null
+    },
+    "EUDSwitchDefault": {
+        "args": [],
+        "doc": null
+    },
+    "EUDTernary": {
+        "args": [
+            "conditions"
+        ],
+        "doc": null
+    },
+    "EUDTraceLog": {
+        "args": [
+            "lineno"
+        ],
+        "doc": "Log trace."
+    },
+    "EUDTracedFunc": {
+        "args": [
+            "fdecl_func"
+        ],
+        "doc": null
+    },
+    "EUDTracedMethod": {
+        "args": [
+            "method"
+        ],
+        "doc": null
+    },
+    "EUDTracedTypedFunc": {
+        "args": [
+            "argtypes",
+            "rettypes"
+        ],
+        "doc": null
+    },
+    "EUDTracedTypedMethod": {
+        "args": [
+            "argtypes",
+            "rettypes"
+        ],
+        "doc": null
+    },
+    "EUDTypedFunc": {
+        "args": [
+            "argtypes",
+            "rettypes"
+        ],
+        "doc": null
+    },
+    "EUDTypedFuncPtr": {
+        "args": [
+            "argtypes",
+            "rettypes"
+        ],
+        "doc": null
+    },
+    "EUDTypedMethod": {
+        "args": [
+            "argtypes",
+            "rettypes"
+        ],
+        "doc": null
+    },
+    "EUDVArray": {
+        "args": [],
+        "doc": null
+    },
+    "EUDWhile": {
+        "args": [],
+        "doc": null
+    },
+    "EUDWhileNot": {
+        "args": [],
+        "doc": null
+    },
+    "EUDXTypedFunc": {
+        "args": [
+            "argmasks",
+            "argtypes",
+            "rettypes"
+        ],
+        "doc": null
+    },
+    "ElapsedTime": {
+        "args": [
+            "Comparison",
+            "Time"
+        ],
+        "doc": null
+    },
+    "EncodeAIScript": {
+        "args": [
+            "ais",
+            "issueError"
+        ],
+        "doc": null
+    },
+    "EncodeAllyStatus": {
+        "args": [
+            "s",
+            "issueError"
+        ],
+        "doc": "\n    Convert [Enemy, Ally, AlliedVictory] to number [0, 1, 2].\n    "
+    },
+    "EncodeComparison": {
+        "args": [
+            "s",
+            "issueError"
+        ],
+        "doc": "\n    Convert [AtLeast, AtMost, Exactly] to number [0, 1, 10].\n    "
+    },
+    "EncodeCount": {
+        "args": [
+            "s",
+            "issueError"
+        ],
+        "doc": "\n    Convert [All, (other numbers)] to number [0, (as-is)].\n    "
+    },
+    "EncodeLocation": {
+        "args": [
+            "loc",
+            "issueError"
+        ],
+        "doc": null
+    },
+    "EncodeModifier": {
+        "args": [
+            "s",
+            "issueError"
+        ],
+        "doc": "\n    Convert [SetTo, Add, Subtract] to number [7, 8, 9].\n    "
+    },
+    "EncodeOrder": {
+        "args": [
+            "s",
+            "issueError"
+        ],
+        "doc": "\n    Convert [Move, Patrol, Attack] to number [0, 1, 2].\n    "
+    },
+    "EncodePlayer": {
+        "args": [
+            "s",
+            "issueError"
+        ],
+        "doc": "\n    Convert player identifier to corresponding number.\n\n    ======================= ========\n        Identifier           Number\n    ======================= ========\n    P1                         0\n    P2                         1\n    P3                         2\n    P4                         3\n    P5                         4\n    P6                         5\n    P7                         6\n    P8                         7\n    P9                         8\n    P10                        9\n    P11                        10\n    P12                        11\n    Player1                    0\n    Player2                    1\n    Player3                    2\n    Player4                    3\n    Player5                    4\n    Player6                    5\n    Player7                    6\n    Player8                    7\n    Player9                    8\n    Player10                   9\n    Player11                   10\n    Player12                   11\n    CurrentPlayer              13\n    Foes                       14\n    Allies                     15\n    NeutralPlayers             16\n    AllPlayers                 17\n    Force1                     18\n    Force2                     19\n    Force3                     20\n    Force4                     21\n    NonAlliedVictoryPlayers    26\n    ======================= ========\n\n    "
+    },
+    "EncodePropState": {
+        "args": [
+            "s",
+            "issueError"
+        ],
+        "doc": "\n    Convert [Enable, Disable, Toogle] to number [4, 5, 6]\n    "
+    },
+    "EncodeProperty": {
+        "args": [
+            "prop",
+            "issueError"
+        ],
+        "doc": null
+    },
+    "EncodeResource": {
+        "args": [
+            "s",
+            "issueError"
+        ],
+        "doc": "\n    Convert [Ore, Gas, OreAndGas] to [0, 1, 2]\n    "
+    },
+    "EncodeScore": {
+        "args": [
+            "s",
+            "issueError"
+        ],
+        "doc": "\n    Convert score type identifier to number.\n\n    ================= ========\n        Score type     Number\n    ================= ========\n    Total                0\n    Units                1\n    Buildings            2\n    UnitsAndBuildings    3\n    Kills                4\n    Razings              5\n    KillsAndRazings      6\n    Custom               7\n    ================= ========\n\n    "
+    },
+    "EncodeString": {
+        "args": [
+            "s",
+            "issueError"
+        ],
+        "doc": null
+    },
+    "EncodeSwitch": {
+        "args": [
+            "sw",
+            "issueError"
+        ],
+        "doc": null
+    },
+    "EncodeSwitchAction": {
+        "args": [
+            "s",
+            "issueError"
+        ],
+        "doc": "\n    Convert [Set, Clear, Toogle, Random] to [4, 5, 6, 11].\n    "
+    },
+    "EncodeSwitchState": {
+        "args": [
+            "s",
+            "issueError"
+        ],
+        "doc": "\n    Convert [Set, Cleared] to [2, 3].\n    "
+    },
+    "EncodeTBL": {
+        "args": [
+            "t",
+            "issueError"
+        ],
+        "doc": null
+    },
+    "EncodeUnit": {
+        "args": [
+            "u",
+            "issueError"
+        ],
+        "doc": null
+    },
+    "Evaluate": {
+        "args": [
+            "x"
+        ],
+        "doc": "\n    Evaluate expressions\n    "
+    },
+    "FlattenList": {
+        "args": [
+            "l"
+        ],
+        "doc": null
+    },
+    "GetChkTokenized": {
+        "args": [],
+        "doc": null
+    },
+    "GetEUDNamespace": {
+        "args": [],
+        "doc": " Get list of functions that inline code can use. "
+    },
+    "GetFirstTrigTrigger": {
+        "args": [
+            "player"
+        ],
+        "doc": " Get dlist start of trig-trigger for player "
+    },
+    "GetGlobalStringBuffer": {
+        "args": [],
+        "doc": null
+    },
+    "GetLastTrigTrigger": {
+        "args": [
+            "player"
+        ],
+        "doc": " Get dlist end of trig-trigger for player"
+    },
+    "GetLocationIndex": {
+        "args": [
+            "l"
+        ],
+        "doc": null
+    },
+    "GetObjectAddr": {
+        "args": [
+            "obj"
+        ],
+        "doc": null
+    },
+    "GetPlayerInfo": {
+        "args": [
+            "player"
+        ],
+        "doc": null
+    },
+    "GetPropertyIndex": {
+        "args": [
+            "prop"
+        ],
+        "doc": null
+    },
+    "GetStringIndex": {
+        "args": [
+            "s"
+        ],
+        "doc": null
+    },
+    "GetSwitchIndex": {
+        "args": [
+            "s"
+        ],
+        "doc": null
+    },
+    "GetTraceStackDepth": {
+        "args": [],
+        "doc": null
+    },
+    "GetTriggerCounter": {
+        "args": [],
+        "doc": null
+    },
+    "GetUnitIndex": {
+        "args": [
+            "u"
+        ],
+        "doc": null
+    },
+    "GiveUnits": {
+        "args": [
+            "Count",
+            "Unit",
+            "Owner",
+            "Where",
+            "NewOwner"
+        ],
+        "doc": null
+    },
+    "HighestScore": {
+        "args": [
+            "ScoreType"
+        ],
+        "doc": null
+    },
+    "IsConstExpr": {
+        "args": [
+            "x"
+        ],
+        "doc": null
+    },
+    "IsEUDVariable": {
+        "args": [
+            "x"
+        ],
+        "doc": null
+    },
+    "IsMapdataInitalized": {
+        "args": [],
+        "doc": null
+    },
+    "IsPName": {
+        "args": [
+            "player",
+            "name"
+        ],
+        "doc": null
+    },
+    "IsSCDBMap": {
+        "args": [],
+        "doc": null
+    },
+    "IsUserCP": {
+        "args": [],
+        "doc": null
+    },
+    "KillUnit": {
+        "args": [
+            "Unit",
+            "Player"
+        ],
+        "doc": null
+    },
+    "KillUnitAt": {
+        "args": [
+            "Count",
+            "Unit",
+            "Where",
+            "ForPlayer"
+        ],
+        "doc": null
+    },
+    "LeaderBoardComputerPlayers": {
+        "args": [
+            "State"
+        ],
+        "doc": null
+    },
+    "LeaderBoardControl": {
+        "args": [
+            "Unit",
+            "Label"
+        ],
+        "doc": null
+    },
+    "LeaderBoardControlAt": {
+        "args": [
+            "Unit",
+            "Location",
+            "Label"
+        ],
+        "doc": null
+    },
+    "LeaderBoardGoalControl": {
+        "args": [
+            "Goal",
+            "Unit",
+            "Label"
+        ],
+        "doc": null
+    },
+    "LeaderBoardGoalControlAt": {
+        "args": [
+            "Goal",
+            "Unit",
+            "Location",
+            "Label"
+        ],
+        "doc": null
+    },
+    "LeaderBoardGoalKills": {
+        "args": [
+            "Goal",
+            "Unit",
+            "Label"
+        ],
+        "doc": null
+    },
+    "LeaderBoardGoalResources": {
+        "args": [
+            "Goal",
+            "ResourceType",
+            "Label"
+        ],
+        "doc": null
+    },
+    "LeaderBoardGoalScore": {
+        "args": [
+            "Goal",
+            "ScoreType",
+            "Label"
+        ],
+        "doc": null
+    },
+    "LeaderBoardGreed": {
+        "args": [
+            "Goal"
+        ],
+        "doc": null
+    },
+    "LeaderBoardKills": {
+        "args": [
+            "Unit",
+            "Label"
+        ],
+        "doc": null
+    },
+    "LeaderBoardResources": {
+        "args": [
+            "ResourceType",
+            "Label"
+        ],
+        "doc": null
+    },
+    "LeaderBoardScore": {
+        "args": [
+            "ScoreType",
+            "Label"
+        ],
+        "doc": null
+    },
+    "LeastKills": {
+        "args": [
+            "Unit"
+        ],
+        "doc": null
+    },
+    "LeastResources": {
+        "args": [
+            "ResourceType"
+        ],
+        "doc": null
+    },
+    "List2Assignable": {
+        "args": [
+            "l"
+        ],
+        "doc": null
+    },
+    "LoadMap": {
+        "args": [
+            "fname"
+        ],
+        "doc": "Load basemap from fname\n\n    :param fname: Path for basemap.\n    "
+    },
+    "LowestScore": {
+        "args": [
+            "ScoreType"
+        ],
+        "doc": null
+    },
+    "MPQAddFile": {
+        "args": [
+            "fname",
+            "content",
+            "isWave"
+        ],
+        "doc": "Add file/wave to output map.\n\n    :param fname: Desired filename in mpq\n    :param content: Content to put inside.\n    :param isWave: Is file wave file? Wave file can be lossy compressed if this\n        flag is set to True.\n\n    .. note::\n        This function may error if duplicate filenames is found. However, not\n        all duplicated filenames are guaranteed to be catched here. Some of\n        them may be catched at UpdateMPQ(internal) function.\n    "
+    },
+    "MPQAddWave": {
+        "args": [
+            "fname",
+            "content"
+        ],
+        "doc": "Add wave to output map.\n\n    :param fname: Desired filename in mpq\n    :param content: Content to put inside.\n\n    .. note:: See `MPQAddFile` for more info\n    "
+    },
+    "MPQCheckFile": {
+        "args": [
+            "fname"
+        ],
+        "doc": "Check if filename is already exist.\n\n    :param fname: Desired filename in mpq\n    "
+    },
+    "Memory": {
+        "args": [
+            "dest",
+            "cmptype",
+            "value"
+        ],
+        "doc": null
+    },
+    "MemoryEPD": {
+        "args": [
+            "dest",
+            "cmptype",
+            "value"
+        ],
+        "doc": null
+    },
+    "MemoryX": {
+        "args": [
+            "dest",
+            "cmptype",
+            "value",
+            "mask"
+        ],
+        "doc": null
+    },
+    "MemoryXEPD": {
+        "args": [
+            "dest",
+            "cmptype",
+            "value",
+            "mask"
+        ],
+        "doc": null
+    },
+    "MinimapPing": {
+        "args": [
+            "Where"
+        ],
+        "doc": null
+    },
+    "ModifyUnitEnergy": {
+        "args": [
+            "Count",
+            "Unit",
+            "Owner",
+            "Where",
+            "Percent"
+        ],
+        "doc": null
+    },
+    "ModifyUnitHangarCount": {
+        "args": [
+            "Add",
+            "Count",
+            "Unit",
+            "Owner",
+            "Where"
+        ],
+        "doc": null
+    },
+    "ModifyUnitHitPoints": {
+        "args": [
+            "Count",
+            "Unit",
+            "Owner",
+            "Where",
+            "Percent"
+        ],
+        "doc": null
+    },
+    "ModifyUnitResourceAmount": {
+        "args": [
+            "Count",
+            "Owner",
+            "Where",
+            "NewValue"
+        ],
+        "doc": null
+    },
+    "ModifyUnitShields": {
+        "args": [
+            "Count",
+            "Unit",
+            "Owner",
+            "Where",
+            "Percent"
+        ],
+        "doc": null
+    },
+    "MostKills": {
+        "args": [
+            "Unit"
+        ],
+        "doc": null
+    },
+    "MostResources": {
+        "args": [
+            "ResourceType"
+        ],
+        "doc": null
+    },
+    "MoveLocation": {
+        "args": [
+            "Location",
+            "OnUnit",
+            "Owner",
+            "DestLocation"
+        ],
+        "doc": null
+    },
+    "MoveUnit": {
+        "args": [
+            "Count",
+            "UnitType",
+            "Owner",
+            "StartLocation",
+            "DestLocation"
+        ],
+        "doc": null
+    },
+    "MuteUnitSpeech": {
+        "args": [],
+        "doc": null
+    },
+    "Never": {
+        "args": [],
+        "doc": null
+    },
+    "NextTrigger": {
+        "args": [],
+        "doc": null
+    },
+    "NonSeqCompute": {
+        "args": [
+            "assignpairs"
+        ],
+        "doc": null
+    },
+    "Opponents": {
+        "args": [
+            "Player",
+            "Comparison",
+            "Number"
+        ],
+        "doc": null
+    },
+    "Order": {
+        "args": [
+            "Unit",
+            "Owner",
+            "StartLocation",
+            "OrderType",
+            "DestLocation"
+        ],
+        "doc": null
+    },
+    "PColor": {
+        "args": [
+            "i"
+        ],
+        "doc": null
+    },
+    "PName": {
+        "args": [
+            "x"
+        ],
+        "doc": null
+    },
+    "PRT_SetInliningRate": {
+        "args": [
+            "rate"
+        ],
+        "doc": " Set how much triggers will be inlined into STR section. "
+    },
+    "PRT_SkipPayloadRelocator": {
+        "args": [
+            "enable"
+        ],
+        "doc": null
+    },
+    "PTrigger": {
+        "args": [
+            "players",
+            "conditions",
+            "actions"
+        ],
+        "doc": "Execute trigger by player basis\n\n    :param players: Players the trigger should execute with. When Current\n        Player specifies any of the players, trigger will execute.\n    :param conditions: List of conditions. If all conditions are met, then\n        actions will be executed.\n    :param actions: List of actions.\n    "
+    },
+    "PauseGame": {
+        "args": [],
+        "doc": null
+    },
+    "PauseTimer": {
+        "args": [],
+        "doc": null
+    },
+    "PlayWAV": {
+        "args": [
+            "WAVName"
+        ],
+        "doc": null
+    },
+    "PopTriggerScope": {
+        "args": [],
+        "doc": null
+    },
+    "PreserveTrigger": {
+        "args": [],
+        "doc": null
+    },
+    "PushTriggerScope": {
+        "args": [],
+        "doc": null
+    },
+    "RandList": {
+        "args": [
+            "lst"
+        ],
+        "doc": null
+    },
+    "RegisterCreatePayloadCallback": {
+        "args": [
+            "f"
+        ],
+        "doc": null
+    },
+    "RemoveUnit": {
+        "args": [
+            "Unit",
+            "Player"
+        ],
+        "doc": null
+    },
+    "RemoveUnitAt": {
+        "args": [
+            "Count",
+            "Unit",
+            "Where",
+            "ForPlayer"
+        ],
+        "doc": null
+    },
+    "RlocInt": {
+        "args": [
+            "offset",
+            "rlocmode"
+        ],
+        "doc": null
+    },
+    "RunAIScript": {
+        "args": [
+            "Script"
+        ],
+        "doc": null
+    },
+    "RunAIScriptAt": {
+        "args": [
+            "Script",
+            "Where"
+        ],
+        "doc": null
+    },
+    "SCMD2Text": {
+        "args": [
+            "s"
+        ],
+        "doc": null
+    },
+    "SaveMap": {
+        "args": [
+            "fname",
+            "rootf"
+        ],
+        "doc": "Save output map with root function.\n\n    :param fname: Path for output map.\n    :param rootf: Main entry function.\n    "
+    },
+    "Score": {
+        "args": [
+            "Player",
+            "ScoreType",
+            "Comparison",
+            "Number"
+        ],
+        "doc": null
+    },
+    "SeqCompute": {
+        "args": [
+            "assignpairs"
+        ],
+        "doc": null
+    },
+    "SetAllianceStatus": {
+        "args": [
+            "Player",
+            "Status"
+        ],
+        "doc": null
+    },
+    "SetCountdownTimer": {
+        "args": [
+            "TimeModifier",
+            "Time"
+        ],
+        "doc": null
+    },
+    "SetCurrentPlayer": {
+        "args": [
+            "p"
+        ],
+        "doc": null
+    },
+    "SetDeaths": {
+        "args": [
+            "Player",
+            "Modifier",
+            "Number",
+            "Unit"
+        ],
+        "doc": null
+    },
+    "SetDeathsX": {
+        "args": [
+            "Player",
+            "Modifier",
+            "Number",
+            "Unit",
+            "Mask"
+        ],
+        "doc": null
+    },
+    "SetDoodadState": {
+        "args": [
+            "State",
+            "Unit",
+            "Owner",
+            "Where"
+        ],
+        "doc": null
+    },
+    "SetInvincibility": {
+        "args": [
+            "State",
+            "Unit",
+            "Owner",
+            "Where"
+        ],
+        "doc": null
+    },
+    "SetKills": {
+        "args": [
+            "Player",
+            "Modifier",
+            "Number",
+            "Unit"
+        ],
+        "doc": null
+    },
+    "SetMemory": {
+        "args": [
+            "dest",
+            "modtype",
+            "value"
+        ],
+        "doc": null
+    },
+    "SetMemoryEPD": {
+        "args": [
+            "dest",
+            "modtype",
+            "value"
+        ],
+        "doc": null
+    },
+    "SetMemoryX": {
+        "args": [
+            "dest",
+            "modtype",
+            "value",
+            "mask"
+        ],
+        "doc": null
+    },
+    "SetMemoryXEPD": {
+        "args": [
+            "epd",
+            "modtype",
+            "value",
+            "mask"
+        ],
+        "doc": null
+    },
+    "SetMissionObjectives": {
+        "args": [
+            "Text"
+        ],
+        "doc": null
+    },
+    "SetNextPtr": {
+        "args": [
+            "trg",
+            "dest"
+        ],
+        "doc": null
+    },
+    "SetNextScenario": {
+        "args": [
+            "ScenarioName"
+        ],
+        "doc": null
+    },
+    "SetNextTrigger": {
+        "args": [
+            "trg"
+        ],
+        "doc": " For optimization purpose, one may call this function directly "
+    },
+    "SetPName": {
+        "args": [
+            "player"
+        ],
+        "doc": null
+    },
+    "SetPNamef": {
+        "args": [
+            "player",
+            "format_string"
+        ],
+        "doc": null
+    },
+    "SetResources": {
+        "args": [
+            "Player",
+            "Modifier",
+            "Amount",
+            "ResourceType"
+        ],
+        "doc": null
+    },
+    "SetScore": {
+        "args": [
+            "Player",
+            "Modifier",
+            "Amount",
+            "ScoreType"
+        ],
+        "doc": null
+    },
+    "SetSwitch": {
+        "args": [
+            "Switch",
+            "State"
+        ],
+        "doc": null
+    },
+    "SetVariables": {
+        "args": [
+            "srclist",
+            "dstlist",
+            "mdtlist"
+        ],
+        "doc": null
+    },
+    "Switch": {
+        "args": [
+            "Switch",
+            "State"
+        ],
+        "doc": null
+    },
+    "TalkingPortrait": {
+        "args": [
+            "Unit",
+            "Time"
+        ],
+        "doc": null
+    },
+    "TextFX_FadeIn": {
+        "args": [],
+        "doc": "Print multiple string / number and apply color from Left To Right\n\n    Keyword arguments:\n    color -- tuple of color codes (default 0x03, 0x04, 0x05, 0x14)\n    wait  -- time interval between effect (default 1)\n    reset -- automatically reset when didn't run for a moment (default True)\n    tag   -- internal tag and identifier (default: vargs)\n    "
+    },
+    "TextFX_FadeOut": {
+        "args": [],
+        "doc": "Print multiple string / number and apply color from Left To Right\n\n    Keyword arguments:\n    color -- tuple of color codes (default 0x03, 0x04, 0x05, 0x14)\n    wait  -- time interval between effect (default 1)\n    reset -- automatically reset when didn't run for a moment (default True)\n    tag   -- internal tag and identifier (default: vargs)\n    "
+    },
+    "TextFX_Remove": {
+        "args": [
+            "tag"
+        ],
+        "doc": null
+    },
+    "TextFX_SetTimer": {
+        "args": [
+            "tag",
+            "modtype",
+            "value"
+        ],
+        "doc": null
+    },
+    "Transmission": {
+        "args": [
+            "Unit",
+            "Where",
+            "WAVName",
+            "TimeModifier",
+            "Time",
+            "Text",
+            "AlwaysDisplay"
+        ],
+        "doc": null
+    },
+    "TrigTriggerBegin": {
+        "args": [
+            "player"
+        ],
+        "doc": null
+    },
+    "TrigTriggerEnd": {
+        "args": [
+            "player"
+        ],
+        "doc": null
+    },
+    "Trigger": {
+        "args": [
+            "conditions",
+            "actions",
+            "preserved"
+        ],
+        "doc": "General easy-to-use trigger\n\n    :param conditions: List of conditions. If there are none, trigger will\n        always execute.\n    :param actions: List of actions. If there are none, trigger will have no\n        actions.\n    :param preserved: Is trigger preserved? True by default.\n\n    .. note::\n        This is 'extended' trigger. All conditions and variables can contain\n        `EUDVariable` object, and there may be more than 16 conditions and 64\n        actions. Trigger internally uses `RawTrigger`.\n    "
+    },
+    "UnMuteUnitSpeech": {
+        "args": [],
+        "doc": null
+    },
+    "UnpauseGame": {
+        "args": [],
+        "doc": null
+    },
+    "UnpauseTimer": {
+        "args": [],
+        "doc": null
+    },
+    "VProc": {
+        "args": [
+            "v",
+            "actions"
+        ],
+        "doc": null
+    },
+    "Victory": {
+        "args": [],
+        "doc": null
+    },
+    "Wait": {
+        "args": [
+            "Time"
+        ],
+        "doc": null
+    },
+    "b2i1": {
+        "args": [
+            "b",
+            "index"
+        ],
+        "doc": null
+    },
+    "b2i2": {
+        "args": [
+            "b",
+            "index"
+        ],
+        "doc": null
+    },
+    "b2i4": {
+        "args": [
+            "b",
+            "index"
+        ],
+        "doc": null
+    },
+    "b2u": {
+        "args": [
+            "b"
+        ],
+        "doc": null
+    },
+    "cachedfunc": {
+        "args": [
+            "function"
+        ],
+        "doc": null
+    },
+    "createEncoder": {
+        "args": [
+            "f"
+        ],
+        "doc": null
+    },
+    "ep_assert": {
+        "args": [
+            "statement",
+            "message"
+        ],
+        "doc": null
+    },
+    "ep_eprint": {
+        "args": [],
+        "doc": null
+    },
+    "ep_warn": {
+        "args": [
+            "message"
+        ],
+        "doc": null
+    },
+    "epsCompile": {
+        "args": [
+            "filename",
+            "bCode"
+        ],
+        "doc": null
+    },
+    "eudplibVersion": {
+        "args": [],
+        "doc": null
+    },
+    "f_addcurpl": {
+        "args": [
+            "cp"
+        ],
+        "doc": "Add current player value.\n\n    eudplib internally caches the current player value,\n    so this function add to that value.\n    "
+    },
+    "f_addloc": {
+        "args": [
+            "locID"
+        ],
+        "doc": null
+    },
+    "f_bitand": {
+        "args": [
+            "a",
+            "b"
+        ],
+        "doc": "Calculate a & b"
+    },
+    "f_bitlshift": {
+        "args": [
+            "a",
+            "b"
+        ],
+        "doc": " Calculate a << b "
+    },
+    "f_bitnand": {
+        "args": [
+            "a",
+            "b"
+        ],
+        "doc": "Calculate ~(a & b)"
+    },
+    "f_bitnor": {
+        "args": [
+            "a",
+            "b"
+        ],
+        "doc": "Calculate ~(a | b)"
+    },
+    "f_bitnot": {
+        "args": [
+            "a"
+        ],
+        "doc": "Calculate ~a"
+    },
+    "f_bitnxor": {
+        "args": [
+            "a",
+            "b"
+        ],
+        "doc": "Calculate ~(a ^ b)"
+    },
+    "f_bitor": {
+        "args": [
+            "a",
+            "b"
+        ],
+        "doc": "Calculate a | b"
+    },
+    "f_bitrshift": {
+        "args": [
+            "a",
+            "b"
+        ],
+        "doc": " Calculate a >> b "
+    },
+    "f_bread": {
+        "args": [
+            "ptr"
+        ],
+        "doc": null
+    },
+    "f_bread_cp": {
+        "args": [
+            "cpo",
+            "subp"
+        ],
+        "doc": null
+    },
+    "f_bwrite": {
+        "args": [
+            "ptr",
+            "b"
+        ],
+        "doc": null
+    },
+    "f_bwrite_cp": {
+        "args": [
+            "cpo",
+            "subp",
+            "b"
+        ],
+        "doc": null
+    },
+    "f_bwrite_epd": {
+        "args": [
+            "epd",
+            "subp",
+            "b"
+        ],
+        "doc": null
+    },
+    "f_cpchar_print": {
+        "args": [],
+        "doc": null
+    },
+    "f_cpstr_print": {
+        "args": [],
+        "doc": "Print multiple string / number to CurrentPlayer.\n\n    :param args: Things to print\n\n    "
+    },
+    "f_cunitepdread_cp": {
+        "args": [
+            "cpo"
+        ],
+        "doc": null
+    },
+    "f_cunitread_cp": {
+        "args": [
+            "cpo"
+        ],
+        "doc": null
+    },
+    "f_dbstr_print": {
+        "args": [
+            "dst"
+        ],
+        "doc": "Print multiple string / number to dst.\n\n    :param dst: Destination address (Not EPD player)\n    :param args: Things to print\n\n    "
+    },
+    "f_dilateloc": {
+        "args": [
+            "locID"
+        ],
+        "doc": null
+    },
+    "f_div": {
+        "args": [
+            "a",
+            "b"
+        ],
+        "doc": "Calculate (a//b, a%b) "
+    },
+    "f_dwadd_cp": {
+        "args": [
+            "cpo",
+            "value"
+        ],
+        "doc": null
+    },
+    "f_dwadd_epd": {
+        "args": [
+            "targetplayer",
+            "value"
+        ],
+        "doc": null
+    },
+    "f_dwepdread_cp": {
+        "args": [
+            "cpo"
+        ],
+        "doc": null
+    },
+    "f_dwepdread_epd_safe": {
+        "args": [],
+        "doc": null
+    },
+    "f_dwread": {
+        "args": [
+            "ptr"
+        ],
+        "doc": null
+    },
+    "f_dwread_cp": {
+        "args": [
+            "cpo"
+        ],
+        "doc": null
+    },
+    "f_dwread_epd_safe": {
+        "args": [],
+        "doc": null
+    },
+    "f_dwsubtract_cp": {
+        "args": [
+            "cpo",
+            "value"
+        ],
+        "doc": null
+    },
+    "f_dwsubtract_epd": {
+        "args": [
+            "targetplayer",
+            "value"
+        ],
+        "doc": null
+    },
+    "f_dwwrite": {
+        "args": [
+            "ptr",
+            "dw"
+        ],
+        "doc": null
+    },
+    "f_dwwrite_cp": {
+        "args": [
+            "cpo",
+            "value"
+        ],
+        "doc": null
+    },
+    "f_dwwrite_epd": {
+        "args": [
+            "targetplayer",
+            "value"
+        ],
+        "doc": null
+    },
+    "f_epdread_cp": {
+        "args": [
+            "cpo"
+        ],
+        "doc": null
+    },
+    "f_epdread_epd": {
+        "args": [
+            "targetplayer"
+        ],
+        "doc": null
+    },
+    "f_epdread_epd_safe": {
+        "args": [],
+        "doc": null
+    },
+    "f_eprintf": {
+        "args": [
+            "format_string"
+        ],
+        "doc": null
+    },
+    "f_eprintln": {
+        "args": [],
+        "doc": null
+    },
+    "f_eprintln2": {
+        "args": [],
+        "doc": null
+    },
+    "f_flagread_epd": {
+        "args": [
+            "targetplayer"
+        ],
+        "doc": null
+    },
+    "f_getlocTL": {
+        "args": [
+            "locID"
+        ],
+        "doc": null
+    },
+    "f_getseed": {
+        "args": [],
+        "doc": null
+    },
+    "f_getuserplayerid": {
+        "args": [],
+        "doc": null
+    },
+    "f_maskread_cp": {
+        "args": [
+            "cpoffset",
+            "mask",
+            "_fdict"
+        ],
+        "doc": null
+    },
+    "f_maskread_epd": {
+        "args": [
+            "targetplayer",
+            "mask",
+            "_fdict"
+        ],
+        "doc": null
+    },
+    "f_mul": {
+        "args": [
+            "a",
+            "b"
+        ],
+        "doc": "Calculate a * b"
+    },
+    "f_parse": {
+        "args": [
+            "dst",
+            "radix"
+        ],
+        "doc": null
+    },
+    "f_posread_cp": {
+        "args": [
+            "cpoffset"
+        ],
+        "doc": null
+    },
+    "f_posread_epd": {
+        "args": [
+            "epd"
+        ],
+        "doc": null
+    },
+    "f_printAt": {
+        "args": [
+            "line",
+            "format_string"
+        ],
+        "doc": null
+    },
+    "f_println": {
+        "args": [
+            "format_string"
+        ],
+        "doc": null
+    },
+    "f_readgen_cp": {
+        "args": [
+            "mask"
+        ],
+        "doc": null
+    },
+    "f_readgen_epd": {
+        "args": [
+            "mask"
+        ],
+        "doc": null
+    },
+    "f_setcurpl": {
+        "args": [
+            "cp"
+        ],
+        "doc": null
+    },
+    "f_setcurpl2cpcache": {
+        "args": [
+            "v",
+            "actions"
+        ],
+        "doc": null
+    },
+    "f_setloc": {
+        "args": [
+            "locID"
+        ],
+        "doc": null
+    },
+    "f_setloc_epd": {
+        "args": [
+            "locID",
+            "epd"
+        ],
+        "doc": null
+    },
+    "f_settbl": {
+        "args": [
+            "tblID",
+            "offset"
+        ],
+        "doc": null
+    },
+    "f_settbl2": {
+        "args": [
+            "tblID",
+            "offset"
+        ],
+        "doc": null
+    },
+    "f_settblf": {
+        "args": [
+            "tblID",
+            "offset",
+            "format_string"
+        ],
+        "doc": null
+    },
+    "f_settblf2": {
+        "args": [
+            "tblID",
+            "offset",
+            "format_string"
+        ],
+        "doc": null
+    },
+    "f_simpleprint": {
+        "args": [],
+        "doc": null
+    },
+    "f_sprintf": {
+        "args": [
+            "dst",
+            "format_string"
+        ],
+        "doc": null
+    },
+    "f_sprintf_cp": {
+        "args": [
+            "format_string"
+        ],
+        "doc": null
+    },
+    "f_srand": {
+        "args": [
+            "seed"
+        ],
+        "doc": null
+    },
+    "f_wread": {
+        "args": [
+            "ptr"
+        ],
+        "doc": null
+    },
+    "f_wread_cp": {
+        "args": [
+            "cpo",
+            "subp"
+        ],
+        "doc": null
+    },
+    "f_wwrite": {
+        "args": [
+            "ptr",
+            "w"
+        ],
+        "doc": null
+    },
+    "f_wwrite_cp": {
+        "args": [
+            "cpo",
+            "subp",
+            "w"
+        ],
+        "doc": null
+    },
+    "f_wwrite_epd": {
+        "args": [
+            "epd",
+            "subp",
+            "w"
+        ],
+        "doc": null
+    },
+    "find_data_file": {
+        "args": [
+            "filename",
+            "file"
+        ],
+        "doc": null
+    },
+    "i2b1": {
+        "args": [
+            "i"
+        ],
+        "doc": null
+    },
+    "i2b2": {
+        "args": [
+            "i"
+        ],
+        "doc": null
+    },
+    "i2b4": {
+        "args": [
+            "i"
+        ],
+        "doc": null
+    },
+    "isStrict": {
+        "args": [],
+        "doc": null
+    },
+    "isUnproxyInstance": {
+        "args": [
+            "x",
+            "cls"
+        ],
+        "doc": null
+    },
+    "setEpsGlobals": {
+        "args": [
+            "globalList"
+        ],
+        "doc": null
+    },
+    "setStrict": {
+        "args": [
+            "mode"
+        ],
+        "doc": null
+    },
+    "toRlocInt": {
+        "args": [
+            "x"
+        ],
+        "doc": "Convert int/RlocInt to rlocint"
+    },
+    "u2b": {
+        "args": [
+            "s"
+        ],
+        "doc": null
+    },
+    "u2utf8": {
+        "args": [
+            "s"
+        ],
+        "doc": null
+    },
+    "unProxy": {
+        "args": [
+            "x"
+        ],
+        "doc": null
+    }
+}{
+    "Action": {
+        "methods": {
+            "CheckArgs": {
+                "args": [
+                    "i"
+                ],
+                "doc": null
+            },
+            "CollectDependency": {
+                "args": [
+                    "pbuffer"
+                ],
+                "doc": null
+            },
+            "Disabled": {
+                "args": [],
+                "doc": null
+            },
+            "Evaluate": {
+                "args": [],
+                "doc": null
+            },
+            "SetParentTrigger": {
+                "args": [
+                    "trg",
+                    "index"
+                ],
+                "doc": null
+            },
+            "WritePayload": {
+                "args": [
+                    "pbuffer"
+                ],
+                "doc": null
+            },
+            "__add__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__floordiv__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__init__": {
+                "args": [
+                    "locid1",
+                    "strid",
+                    "wavid",
+                    "time",
+                    "player1",
+                    "player2",
+                    "unitid",
+                    "acttype",
+                    "amount",
+                    "flags"
+                ],
+                "doc": "\n        See :mod:`eudplib.base.stocktrg` for stock actions list.\n        "
+            },
+            "__mod__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__mul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__neg__": {
+                "args": [],
+                "doc": null
+            },
+            "__radd__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__rmul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rsub__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__sub__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            }
+        },
+        "doc": "\n    Action class.\n\n    Memory layout.\n\n     ======  ============= ========  ==========\n     Offset  Field Name    Position  EPD Player\n     ======  ============= ========  ==========\n       +00   locid1         dword0   EPD(act)+0\n       +04   strid          dword1   EPD(act)+1\n       +08   wavid          dword2   EPD(act)+2\n       +0C   time           dword3   EPD(act)+3\n       +10   player1        dword4   EPD(act)+4\n       +14   player2        dword5   EPD(act)+5\n       +18   unitid         dword6   EPD(act)+6\n       +1A   acttype\n       +1B   amount\n       +1C   flags          dword7   EPD(act)+7\n       +1D   internal[3\n     ======  ============= ========  ==========\n    "
+    },
+    "CPByteWriter": {
+        "methods": {
+            "__init__": {
+                "args": [],
+                "doc": null
+            },
+            "flushdword": {
+                "args": [],
+                "doc": "Flush buffer."
+            },
+            "writebyte": {
+                "args": [],
+                "doc": "Write byte to current position.\n\n        Write a byte to current position of EUDByteWriter. Writer will advance\n        by 1 byte.\n\n        .. note::\n            Bytes could be buffered before written to memory. After you\n            finished using writebytes, you must call `flushdword` to flush the\n            buffer.\n        "
+            }
+        },
+        "doc": "Write byte by byte"
+    },
+    "CPString": {
+        "methods": {
+            "Display": {
+                "args": [
+                    "action"
+                ],
+                "doc": null
+            },
+            "GetNextPtrMemory": {
+                "args": [],
+                "doc": null
+            },
+            "GetVTable": {
+                "args": [],
+                "doc": null
+            },
+            "__init__": {
+                "args": [
+                    "content"
+                ],
+                "doc": "Constructor for CPString\n        :param content: Initial CPString content / capacity. Capacity of\n            CPString is determined by size of this. If content is integer, then\n            initial capacity and content of CPString will be set to\n            content(int) and empty string.\n        :type content: str, bytes, int\n        "
+            }
+        },
+        "doc": "\n    store String in SetDeaths Actions, easy to concatenate.\n    "
+    },
+    "Condition": {
+        "methods": {
+            "CheckArgs": {
+                "args": [
+                    "i"
+                ],
+                "doc": null
+            },
+            "CollectDependency": {
+                "args": [
+                    "pbuffer"
+                ],
+                "doc": null
+            },
+            "Disabled": {
+                "args": [],
+                "doc": null
+            },
+            "Evaluate": {
+                "args": [],
+                "doc": null
+            },
+            "SetParentTrigger": {
+                "args": [
+                    "trg",
+                    "index"
+                ],
+                "doc": null
+            },
+            "WritePayload": {
+                "args": [
+                    "pbuffer"
+                ],
+                "doc": null
+            },
+            "__add__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__bool__": {
+                "args": [],
+                "doc": null
+            },
+            "__floordiv__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__init__": {
+                "args": [
+                    "locid",
+                    "player",
+                    "amount",
+                    "unitid",
+                    "comparison",
+                    "condtype",
+                    "restype",
+                    "flags"
+                ],
+                "doc": null
+            },
+            "__mod__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__mul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__neg__": {
+                "args": [],
+                "doc": null
+            },
+            "__radd__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__rmul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rsub__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__sub__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            }
+        },
+        "doc": "\n    Condition class.\n\n    Memory layout:\n\n     ======  =============  ========  ===========\n     Offset  Field name     Position  EPD Player\n     ======  =============  ========  ===========\n       +00   locid           dword0   EPD(cond)+0\n       +04   player          dword1   EPD(cond)+1\n       +08   amount          dword2   EPD(cond)+2\n       +0C   unitid          dword3   EPD(cond)+3\n       +0E   comparison\n       +0F   condtype\n       +10   restype         dword4   EPD(cond)+4\n       +11   flags\n       +12   internal[2]\n     ======  =============  ========  ===========\n    "
+    },
+    "ConstExpr": {
+        "methods": {
+            "Evaluate": {
+                "args": [],
+                "doc": null
+            },
+            "__add__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__floordiv__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__init__": {
+                "args": [
+                    "baseobj",
+                    "offset",
+                    "rlocmode"
+                ],
+                "doc": null
+            },
+            "__mod__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__mul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__neg__": {
+                "args": [],
+                "doc": null
+            },
+            "__radd__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__rmul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rsub__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__sub__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            }
+        },
+        "doc": " Class for general expression with rlocints.\n    "
+    },
+    "CtrlStruOpener": {
+        "methods": {
+            "__bool__": {
+                "args": [],
+                "doc": null
+            },
+            "__call__": {
+                "args": [],
+                "doc": null
+            },
+            "__del__": {
+                "args": [],
+                "doc": null
+            },
+            "__init__": {
+                "args": [
+                    "f"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "DBString": {
+        "methods": {
+            "Display": {
+                "args": [],
+                "doc": null
+            },
+            "GetStringMemoryAddr": {
+                "args": [],
+                "doc": "Get memory address of DBString content.\n\n        :returns: Memory address of DBString content.\n        "
+            },
+            "Play": {
+                "args": [],
+                "doc": null
+            },
+            "__add__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__and__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__bool__": {
+                "args": [],
+                "doc": null
+            },
+            "__call__": {
+                "args": [],
+                "doc": null
+            },
+            "__eq__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__floordiv__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__ge__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__getattr__": {
+                "args": [
+                    "name"
+                ],
+                "doc": null
+            },
+            "__getattribute__": {
+                "args": [
+                    "name"
+                ],
+                "doc": null
+            },
+            "__getitem__": {
+                "args": [
+                    "name"
+                ],
+                "doc": null
+            },
+            "__gt__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__hash__": {
+                "args": [],
+                "doc": null
+            },
+            "__init__": {
+                "args": [
+                    "content"
+                ],
+                "doc": "Constructor for DBString\n\n        :param content: Initial DBString content / capacity. Capacity of\n            DBString is determined by size of this. If content is integer, then\n            initial capacity and content of DBString will be set to\n            content(int) and empty string.\n\n        :type content: str, bytes, int\n        "
+            },
+            "__invert__": {
+                "args": [],
+                "doc": null
+            },
+            "__le__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__lshift__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__lt__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__mul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__ne__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__neg__": {
+                "args": [],
+                "doc": null
+            },
+            "__or__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__radd__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rand__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rfloordiv__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rmul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__ror__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rsub__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rxor__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__setitem__": {
+                "args": [
+                    "name",
+                    "newvalue"
+                ],
+                "doc": null
+            },
+            "__sub__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__xor__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "getValue": {
+                "args": [],
+                "doc": null
+            },
+            "cast": {
+                "args": [
+                    "cls",
+                    "_from"
+                ],
+                "doc": null
+            }
+        },
+        "doc": "Object for storing single modifiable string.\n\n    Manipluating STR section is hard. DBString stores only one string, so that\n    modifying its structure is substantially easier than modifying entire STR\n    section. You can do anything you would do with normal string with DBString.\n    "
+    },
+    "Db": {
+        "methods": {
+            "CollectDependency": {
+                "args": [
+                    "pbuffer"
+                ],
+                "doc": null
+            },
+            "DynamicConstructed": {
+                "args": [],
+                "doc": " Whether function is constructed dynamically.\n\n        Dynamically constructed EUDObject may have their dependency list\n        generated during object construction. So their dependency list is\n        re-examined before allocation phase.\n        "
+            },
+            "Evaluate": {
+                "args": [],
+                "doc": "\n        What this object should be evaluated to when used in eudplib program.\n\n        :return: Default) Memory address of this object.\n\n        .. note::\n            In overriding this method, you can use\n            :func:`eudplib.GetObjectAddr`.\n        "
+            },
+            "GetDataSize": {
+                "args": [],
+                "doc": null
+            },
+            "WritePayload": {
+                "args": [
+                    "pbuffer"
+                ],
+                "doc": null
+            },
+            "__add__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__floordiv__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__init__": {
+                "args": [
+                    "b"
+                ],
+                "doc": null
+            },
+            "__mod__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__mul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__neg__": {
+                "args": [],
+                "doc": null
+            },
+            "__radd__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__rmul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rsub__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__sub__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "getValueAddr": {
+                "args": [],
+                "doc": null
+            }
+        },
+        "doc": "Class for raw data object"
+    },
+    "EPDCUnitMap": {
+        "methods": {
+            "__getattr__": {
+                "args": [
+                    "name"
+                ],
+                "doc": null
+            },
+            "__init__": {
+                "args": [
+                    "epd"
+                ],
+                "doc": null
+            },
+            "__setattr__": {
+                "args": [
+                    "name",
+                    "value"
+                ],
+                "doc": null
+            },
+            "getdwepd": {
+                "args": [
+                    "name"
+                ],
+                "doc": null
+            },
+            "getepd": {
+                "args": [
+                    "name"
+                ],
+                "doc": null
+            },
+            "getpos": {
+                "args": [
+                    "name"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "EPError": {
+        "methods": {},
+        "doc": null
+    },
+    "EPSFinder": {
+        "methods": {
+            "__init__": {
+                "args": [],
+                "doc": null
+            },
+            "_getFinder": {
+                "args": [
+                    "path"
+                ],
+                "doc": null
+            },
+            "find_spec": {
+                "args": [
+                    "fullname",
+                    "path",
+                    "target"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "EPSLoader": {
+        "methods": {
+            "__eq__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__hash__": {
+                "args": [],
+                "doc": null
+            },
+            "__init__": {
+                "args": [
+                    "fullname",
+                    "path"
+                ],
+                "doc": "Cache the module name and the path to the file found by the\n        finder."
+            },
+            "_cache_bytecode": {
+                "args": [
+                    "source_path",
+                    "bytecode_path",
+                    "data"
+                ],
+                "doc": null
+            },
+            "contents": {
+                "args": [],
+                "doc": null
+            },
+            "create_module": {
+                "args": [
+                    "spec"
+                ],
+                "doc": "Use default semantics for module creation."
+            },
+            "exec_module": {
+                "args": [
+                    "module"
+                ],
+                "doc": "Execute the module."
+            },
+            "get_code": {
+                "args": [
+                    "fullname"
+                ],
+                "doc": "Concrete implementation of InspectLoader.get_code.\n\n        Reading of bytecode requires path_stats to be implemented. To write\n        bytecode, set_data must also be implemented.\n\n        "
+            },
+            "get_data": {
+                "args": [
+                    "path"
+                ],
+                "doc": "Return the data from path as raw bytes."
+            },
+            "get_filename": {
+                "args": [
+                    "name"
+                ],
+                "doc": "Return the path to the source file as found by the finder."
+            },
+            "get_resource_reader": {
+                "args": [
+                    "name"
+                ],
+                "doc": null
+            },
+            "get_source": {
+                "args": [
+                    "fullname"
+                ],
+                "doc": "Concrete implementation of InspectLoader.get_source."
+            },
+            "is_package": {
+                "args": [
+                    "fullname"
+                ],
+                "doc": "Concrete implementation of InspectLoader.is_package by checking if\n        the path returned by get_filename has a filename of '__init__.py'."
+            },
+            "is_resource": {
+                "args": [
+                    "name"
+                ],
+                "doc": null
+            },
+            "load_module": {
+                "args": [
+                    "name"
+                ],
+                "doc": "Load a module from a file.\n\n        This method is deprecated.  Use exec_module() instead.\n\n        "
+            },
+            "open_resource": {
+                "args": [
+                    "resource"
+                ],
+                "doc": null
+            },
+            "path_mtime": {
+                "args": [
+                    "path"
+                ],
+                "doc": "Optional method that returns the modification time (an int) for the\n        specified path (a str).\n\n        Raises OSError when the path cannot be handled.\n        "
+            },
+            "path_stats": {
+                "args": [
+                    "path"
+                ],
+                "doc": "Return the metadata for the path."
+            },
+            "resource_path": {
+                "args": [
+                    "resource"
+                ],
+                "doc": null
+            },
+            "set_data": {
+                "args": [
+                    "path",
+                    "data"
+                ],
+                "doc": "Write bytes data to a file."
+            },
+            "source_to_code": {
+                "args": [
+                    "data",
+                    "path"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "EPWarning": {
+        "methods": {},
+        "doc": null
+    },
+    "EUDArray": {
+        "methods": {
+            "__add__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__and__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__bool__": {
+                "args": [],
+                "doc": null
+            },
+            "__call__": {
+                "args": [],
+                "doc": null
+            },
+            "__eq__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__floordiv__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__ge__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__getattr__": {
+                "args": [
+                    "name"
+                ],
+                "doc": null
+            },
+            "__getattribute__": {
+                "args": [
+                    "name"
+                ],
+                "doc": null
+            },
+            "__getitem__": {
+                "args": [
+                    "key"
+                ],
+                "doc": null
+            },
+            "__gt__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__hash__": {
+                "args": [],
+                "doc": null
+            },
+            "__init__": {
+                "args": [
+                    "initval"
+                ],
+                "doc": null
+            },
+            "__invert__": {
+                "args": [],
+                "doc": null
+            },
+            "__iter__": {
+                "args": [],
+                "doc": null
+            },
+            "__le__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__lshift__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__lt__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__mul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__ne__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__neg__": {
+                "args": [],
+                "doc": null
+            },
+            "__or__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__radd__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rand__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rfloordiv__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rmul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__ror__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rsub__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rxor__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__setitem__": {
+                "args": [
+                    "key",
+                    "item"
+                ],
+                "doc": null
+            },
+            "__sub__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__xor__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "get": {
+                "args": [
+                    "key"
+                ],
+                "doc": null
+            },
+            "getValue": {
+                "args": [],
+                "doc": null
+            },
+            "set": {
+                "args": [
+                    "key",
+                    "item"
+                ],
+                "doc": null
+            },
+            "cast": {
+                "args": [
+                    "cls",
+                    "_from"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "EUDByteReader": {
+        "methods": {
+            "__init__": {
+                "args": [],
+                "doc": null
+            },
+            "readbyte": {
+                "args": [],
+                "doc": "Read byte from current address. ByteReader will advance by 1 bytes.\n\n        :returns: Read byte\n        "
+            },
+            "seekepd": {
+                "args": [
+                    "epdoffset"
+                ],
+                "doc": "Seek EUDByteReader to specific epd player address"
+            },
+            "seekoffset": {
+                "args": [],
+                "doc": "Seek EUDByteReader to specific address"
+            }
+        },
+        "doc": "Read byte by byte."
+    },
+    "EUDByteStream": {
+        "methods": {
+            "__init__": {
+                "args": [],
+                "doc": null
+            },
+            "copyto": {
+                "args": [
+                    "bytestream"
+                ],
+                "doc": null
+            },
+            "readbyte": {
+                "args": [],
+                "doc": "Read byte from current address. ByteReader will advance by 1 bytes.\n\n        :returns: Read byte\n        "
+            },
+            "seekepd": {
+                "args": [
+                    "epdoffset"
+                ],
+                "doc": "Seek EUDByteWriter to specific epd player address"
+            },
+            "seekoffset": {
+                "args": [],
+                "doc": "Seek EUDByteWriter to specific address"
+            },
+            "writebyte": {
+                "args": [],
+                "doc": "Write byte to current position.\n\n        Write a byte to current position of EUDByteWriter.\n        ByteWriter will advance by 1 byte.\n        "
+            },
+            "flushdword": {
+                "args": [
+                    "cls"
+                ],
+                "doc": null
+            }
+        },
+        "doc": "Write and read byte by byte."
+    },
+    "EUDByteWriter": {
+        "methods": {
+            "__init__": {
+                "args": [],
+                "doc": null
+            },
+            "seekepd": {
+                "args": [
+                    "epdoffset"
+                ],
+                "doc": "Seek EUDByteWriter to specific epd player address"
+            },
+            "seekoffset": {
+                "args": [],
+                "doc": "Seek EUDByteWriter to specific address"
+            },
+            "writebyte": {
+                "args": [],
+                "doc": "Write byte to current position.\n\n        Write a byte to current position of EUDByteWriter.\n        ByteWriter will advance by 1 byte.\n        "
+            },
+            "flushdword": {
+                "args": [
+                    "cls"
+                ],
+                "doc": null
+            }
+        },
+        "doc": "Write byte by byte."
+    },
+    "EUDFuncN": {
+        "methods": {
+            "_AddReturn": {
+                "args": [
+                    "retv",
+                    "needjump"
+                ],
+                "doc": null
+            },
+            "_CreateFuncArgs": {
+                "args": [],
+                "doc": null
+            },
+            "_CreateFuncBody": {
+                "args": [],
+                "doc": null
+            },
+            "__call__": {
+                "args": [],
+                "doc": null
+            },
+            "__init__": {
+                "args": [
+                    "argn",
+                    "callerfunc",
+                    "bodyfunc"
+                ],
+                "doc": " EUDFuncN\n\n        :param callerfunc: Function to be wrapped.\n        :param argn: Count of arguments got by callerfunc\n        :param bodyfunc: Where function should return to\n        "
+            },
+            "size": {
+                "args": [],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "EUDGrp": {
+        "methods": {
+            "CollectDependency": {
+                "args": [
+                    "pbuffer"
+                ],
+                "doc": null
+            },
+            "DynamicConstructed": {
+                "args": [],
+                "doc": " Whether function is constructed dynamically.\n\n        Dynamically constructed EUDObject may have their dependency list\n        generated during object construction. So their dependency list is\n        re-examined before allocation phase.\n        "
+            },
+            "Evaluate": {
+                "args": [],
+                "doc": null
+            },
+            "GetDataSize": {
+                "args": [],
+                "doc": null
+            },
+            "WritePayload": {
+                "args": [
+                    "buf"
+                ],
+                "doc": null
+            },
+            "__add__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__floordiv__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__init__": {
+                "args": [
+                    "content"
+                ],
+                "doc": null
+            },
+            "__mod__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__mul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__neg__": {
+                "args": [],
+                "doc": null
+            },
+            "__radd__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__rmul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rsub__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__sub__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            }
+        },
+        "doc": "Object for GRP\n\n    Starcraft modifies GRP in certain way before it is used ingame. This object\n    emulates that modification so that SC recognizes GRP correctly.\n    "
+    },
+    "EUDLightVariable": {
+        "methods": {
+            "AddNumber": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "AddNumberX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "Assign": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "AtLeast": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "AtLeastX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "AtMost": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "AtMostX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "Exactly": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "ExactlyX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "SetNumber": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "SetNumberX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "SubtractNumber": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "SubtractNumberX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "__eq__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__ge__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__hash__": {
+                "args": [],
+                "doc": null
+            },
+            "__iadd__": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "__init__": {
+                "args": [
+                    "initvalue"
+                ],
+                "doc": null
+            },
+            "__isub__": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "__le__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__lshift__": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "checkNonRValue": {
+                "args": [],
+                "doc": null
+            },
+            "getValueAddr": {
+                "args": [],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "EUDObject": {
+        "methods": {
+            "CollectDependency": {
+                "args": [
+                    "pbuffer"
+                ],
+                "doc": null
+            },
+            "DynamicConstructed": {
+                "args": [],
+                "doc": " Whether function is constructed dynamically.\n\n        Dynamically constructed EUDObject may have their dependency list\n        generated during object construction. So their dependency list is\n        re-examined before allocation phase.\n        "
+            },
+            "Evaluate": {
+                "args": [],
+                "doc": "\n        What this object should be evaluated to when used in eudplib program.\n\n        :return: Default) Memory address of this object.\n\n        .. note::\n            In overriding this method, you can use\n            :func:`eudplib.GetObjectAddr`.\n        "
+            },
+            "GetDataSize": {
+                "args": [],
+                "doc": "Memory size of object."
+            },
+            "WritePayload": {
+                "args": [
+                    "pbuffer"
+                ],
+                "doc": "Write object"
+            },
+            "__add__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__floordiv__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__init__": {
+                "args": [],
+                "doc": null
+            },
+            "__mod__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__mul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__neg__": {
+                "args": [],
+                "doc": null
+            },
+            "__radd__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__rmul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rsub__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__sub__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            }
+        },
+        "doc": "\n    Class for standalone object on memory\n\n    .. note::\n        Object collection occures in three steps:\n\n        - Collection phase : collects object used in map generation. Object\n        used in WritePayload method are being collected. Methods Evaluate\n        and WritePayload are called during this phase.\n        - Allocation phase : Object have their offset assigned. GetDataSize\n        method is called on this phase, so if GetDataSize is being called,\n        it means that every object required in map has been collected.\n        WritePayload and GetDataSize method should behave exactly the same as\n        it should on Writing phase here.\n        - Writing phase : Object is written into payload.\n    "
+    },
+    "EUDSCAnd": {
+        "methods": {
+            "__call__": {
+                "args": [
+                    "cond"
+                ],
+                "doc": null
+            },
+            "__init__": {
+                "args": [],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "EUDSCOr": {
+        "methods": {
+            "__call__": {
+                "args": [
+                    "cond"
+                ],
+                "doc": null
+            },
+            "__init__": {
+                "args": [],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "EUDStruct": {
+        "methods": {
+            "__add__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__and__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__bool__": {
+                "args": [],
+                "doc": null
+            },
+            "__call__": {
+                "args": [],
+                "doc": null
+            },
+            "__eq__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__floordiv__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__ge__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__getattr__": {
+                "args": [
+                    "name"
+                ],
+                "doc": null
+            },
+            "__getattribute__": {
+                "args": [
+                    "name"
+                ],
+                "doc": null
+            },
+            "__getitem__": {
+                "args": [
+                    "name"
+                ],
+                "doc": null
+            },
+            "__gt__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__hash__": {
+                "args": [],
+                "doc": null
+            },
+            "__init__": {
+                "args": [],
+                "doc": null
+            },
+            "__invert__": {
+                "args": [],
+                "doc": null
+            },
+            "__le__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__lshift__": {
+                "args": [
+                    "rhs"
+                ],
+                "doc": null
+            },
+            "__lt__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__mul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__ne__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__neg__": {
+                "args": [],
+                "doc": null
+            },
+            "__or__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__radd__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rand__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rfloordiv__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rmul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__ror__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rsub__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rxor__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__setattr__": {
+                "args": [
+                    "name",
+                    "value"
+                ],
+                "doc": null
+            },
+            "__setitem__": {
+                "args": [
+                    "name",
+                    "newvalue"
+                ],
+                "doc": null
+            },
+            "__sub__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__xor__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "asVariable": {
+                "args": [],
+                "doc": null
+            },
+            "constructor": {
+                "args": [],
+                "doc": "Constructor for individual structures.\n\n        Default constructor accepts no arguments, but derived classes may\n        accept additional arguments.\n\n        This function is called when\n            - Argument is allocated from pool   (self.isPooled = True)\n            - Argument is generated             (self.isPooled = False)\n\n        You may choose to either allocate member from pool or just allocate\n        members statically via self.isPooled.\n        "
+            },
+            "constructor_static": {
+                "args": [],
+                "doc": "Specialized constructor for static variables.\n\n        Static variable may not require allocation for member variables.\n        Function may specialize their behavior by overriding this function"
+            },
+            "copy": {
+                "args": [],
+                "doc": " Create struct clone "
+            },
+            "copyto": {
+                "args": [
+                    "inst"
+                ],
+                "doc": " Copy struct to other instance "
+            },
+            "destructor": {
+                "args": [],
+                "doc": "Destructor for individual structures.\n\n        Destructor accepts no arguments. Destructor is called when\n            - Manually called. (Ex: stack variable)\n            - free() is called for object\n        "
+            },
+            "getValue": {
+                "args": [],
+                "doc": null
+            },
+            "getfield": {
+                "args": [
+                    "name"
+                ],
+                "doc": null
+            },
+            "setall": {
+                "args": [
+                    "values"
+                ],
+                "doc": null
+            },
+            "setfield": {
+                "args": [
+                    "name",
+                    "value"
+                ],
+                "doc": null
+            },
+            "alloc": {
+                "args": [
+                    "cls"
+                ],
+                "doc": null
+            },
+            "cast": {
+                "args": [
+                    "cls",
+                    "_from"
+                ],
+                "doc": null
+            },
+            "free": {
+                "args": [
+                    "cls",
+                    "data"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "EUDVArrayReader": {
+        "methods": {
+            "__init__": {
+                "args": [],
+                "doc": null
+            },
+            "_maketrg": {
+                "args": [],
+                "doc": null
+            },
+            "read": {
+                "args": [
+                    "acts"
+                ],
+                "doc": null
+            },
+            "seek": {
+                "args": [
+                    "varr_ptr",
+                    "varr_epd",
+                    "eudv",
+                    "acts"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "EUDVariable": {
+        "methods": {
+            "AddDest": {
+                "args": [
+                    "dest"
+                ],
+                "doc": null
+            },
+            "AddNumber": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "AddNumberX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "Assign": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "AtLeast": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "AtLeastX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "AtMost": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "AtMostX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "Exactly": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "ExactlyX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "GetVTable": {
+                "args": [],
+                "doc": null
+            },
+            "QueueAddTo": {
+                "args": [
+                    "dest"
+                ],
+                "doc": null
+            },
+            "QueueAssignTo": {
+                "args": [
+                    "dest"
+                ],
+                "doc": null
+            },
+            "QueueSubtractTo": {
+                "args": [
+                    "dest"
+                ],
+                "doc": null
+            },
+            "SetDest": {
+                "args": [
+                    "dest"
+                ],
+                "doc": null
+            },
+            "SetNumber": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "SetNumberX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "SubtractDest": {
+                "args": [
+                    "dest"
+                ],
+                "doc": null
+            },
+            "SubtractNumber": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "SubtractNumberX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "__add__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__and__": {
+                "args": [
+                    "x",
+                    "y"
+                ],
+                "doc": null
+            },
+            "__eq__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__floordiv__": {
+                "args": [
+                    "x",
+                    "y"
+                ],
+                "doc": null
+            },
+            "__ge__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__gt__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__hash__": {
+                "args": [],
+                "doc": null
+            },
+            "__iadd__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__iand__": {
+                "args": [
+                    "rhs"
+                ],
+                "doc": null
+            },
+            "__ifloordiv__": {
+                "args": [
+                    "x",
+                    "y"
+                ],
+                "doc": null
+            },
+            "__iifloordiv__": {
+                "args": [
+                    "rhs"
+                ],
+                "doc": null
+            },
+            "__iimod__": {
+                "args": [
+                    "rhs"
+                ],
+                "doc": null
+            },
+            "__iimul__": {
+                "args": [
+                    "rhs"
+                ],
+                "doc": null
+            },
+            "__ilshift__": {
+                "args": [
+                    "x"
+                ],
+                "doc": null
+            },
+            "__imod__": {
+                "args": [
+                    "x",
+                    "y"
+                ],
+                "doc": null
+            },
+            "__imul__": {
+                "args": [
+                    "x",
+                    "y"
+                ],
+                "doc": null
+            },
+            "__init__": {
+                "args": [
+                    "initval"
+                ],
+                "doc": null
+            },
+            "__invert__": {
+                "args": [
+                    "x"
+                ],
+                "doc": null
+            },
+            "__ior__": {
+                "args": [
+                    "rhs"
+                ],
+                "doc": null
+            },
+            "__irshift__": {
+                "args": [
+                    "x"
+                ],
+                "doc": null
+            },
+            "__isub__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__ixor__": {
+                "args": [
+                    "rhs"
+                ],
+                "doc": null
+            },
+            "__le__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__lshift__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__lt__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__mod__": {
+                "args": [
+                    "x",
+                    "y"
+                ],
+                "doc": null
+            },
+            "__mul__": {
+                "args": [
+                    "x",
+                    "y"
+                ],
+                "doc": null
+            },
+            "__ne__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__neg__": {
+                "args": [
+                    "x"
+                ],
+                "doc": null
+            },
+            "__or__": {
+                "args": [
+                    "x",
+                    "y"
+                ],
+                "doc": null
+            },
+            "__radd__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__rand__": {
+                "args": [
+                    "lhs"
+                ],
+                "doc": null
+            },
+            "__rfloordiv__": {
+                "args": [
+                    "lhs"
+                ],
+                "doc": null
+            },
+            "__rifloordiv__": {
+                "args": [
+                    "lhs"
+                ],
+                "doc": null
+            },
+            "__rimod__": {
+                "args": [
+                    "lhs"
+                ],
+                "doc": null
+            },
+            "__rimul__": {
+                "args": [
+                    "lhs"
+                ],
+                "doc": null
+            },
+            "__rmod__": {
+                "args": [
+                    "lhs"
+                ],
+                "doc": null
+            },
+            "__rmul__": {
+                "args": [
+                    "lhs"
+                ],
+                "doc": null
+            },
+            "__ror__": {
+                "args": [
+                    "lhs"
+                ],
+                "doc": null
+            },
+            "__rsub__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__rxor__": {
+                "args": [
+                    "lhs"
+                ],
+                "doc": null
+            },
+            "__sub__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__xor__": {
+                "args": [
+                    "x",
+                    "y"
+                ],
+                "doc": null
+            },
+            "checkNonRValue": {
+                "args": [],
+                "doc": null
+            },
+            "getDestAddr": {
+                "args": [],
+                "doc": null
+            },
+            "getValueAddr": {
+                "args": [],
+                "doc": null
+            },
+            "makeL": {
+                "args": [],
+                "doc": null
+            },
+            "makeR": {
+                "args": [],
+                "doc": null
+            }
+        },
+        "doc": "\n    Full variable.\n    "
+    },
+    "EUDXVariable": {
+        "methods": {
+            "AddDest": {
+                "args": [
+                    "dest"
+                ],
+                "doc": null
+            },
+            "AddMask": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "AddMaskX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "AddNumber": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "AddNumberX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "Assign": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "AtLeast": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "AtLeastX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "AtMost": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "AtMostX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "Exactly": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "ExactlyX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "GetVTable": {
+                "args": [],
+                "doc": null
+            },
+            "MaskAtLeast": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "MaskAtLeastX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "MaskAtMost": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "MaskAtMostX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "MaskExactly": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "MaskExactlyX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "QueueAddTo": {
+                "args": [
+                    "dest"
+                ],
+                "doc": null
+            },
+            "QueueAssignTo": {
+                "args": [
+                    "dest"
+                ],
+                "doc": null
+            },
+            "QueueSubtractTo": {
+                "args": [
+                    "dest"
+                ],
+                "doc": null
+            },
+            "SetDest": {
+                "args": [
+                    "dest"
+                ],
+                "doc": null
+            },
+            "SetMask": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "SetMaskX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "SetNumber": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "SetNumberX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "SubtractDest": {
+                "args": [
+                    "dest"
+                ],
+                "doc": null
+            },
+            "SubtractMask": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "SubtractMaskX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "SubtractNumber": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            },
+            "SubtractNumberX": {
+                "args": [
+                    "value",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "__add__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__and__": {
+                "args": [
+                    "x",
+                    "y"
+                ],
+                "doc": null
+            },
+            "__eq__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__floordiv__": {
+                "args": [
+                    "x",
+                    "y"
+                ],
+                "doc": null
+            },
+            "__ge__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__gt__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__hash__": {
+                "args": [],
+                "doc": null
+            },
+            "__iadd__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__iand__": {
+                "args": [
+                    "rhs"
+                ],
+                "doc": null
+            },
+            "__ifloordiv__": {
+                "args": [
+                    "x",
+                    "y"
+                ],
+                "doc": null
+            },
+            "__iifloordiv__": {
+                "args": [
+                    "rhs"
+                ],
+                "doc": null
+            },
+            "__iimod__": {
+                "args": [
+                    "rhs"
+                ],
+                "doc": null
+            },
+            "__iimul__": {
+                "args": [
+                    "rhs"
+                ],
+                "doc": null
+            },
+            "__ilshift__": {
+                "args": [
+                    "x"
+                ],
+                "doc": null
+            },
+            "__imod__": {
+                "args": [
+                    "x",
+                    "y"
+                ],
+                "doc": null
+            },
+            "__imul__": {
+                "args": [
+                    "x",
+                    "y"
+                ],
+                "doc": null
+            },
+            "__init__": {
+                "args": [
+                    "initval",
+                    "mask"
+                ],
+                "doc": null
+            },
+            "__invert__": {
+                "args": [
+                    "x"
+                ],
+                "doc": null
+            },
+            "__ior__": {
+                "args": [
+                    "rhs"
+                ],
+                "doc": null
+            },
+            "__irshift__": {
+                "args": [
+                    "x"
+                ],
+                "doc": null
+            },
+            "__isub__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__ixor__": {
+                "args": [
+                    "rhs"
+                ],
+                "doc": null
+            },
+            "__le__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__lshift__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__lt__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__mod__": {
+                "args": [
+                    "x",
+                    "y"
+                ],
+                "doc": null
+            },
+            "__mul__": {
+                "args": [
+                    "x",
+                    "y"
+                ],
+                "doc": null
+            },
+            "__ne__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__neg__": {
+                "args": [
+                    "x"
+                ],
+                "doc": null
+            },
+            "__or__": {
+                "args": [
+                    "x",
+                    "y"
+                ],
+                "doc": null
+            },
+            "__radd__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__rand__": {
+                "args": [
+                    "lhs"
+                ],
+                "doc": null
+            },
+            "__rfloordiv__": {
+                "args": [
+                    "lhs"
+                ],
+                "doc": null
+            },
+            "__rifloordiv__": {
+                "args": [
+                    "lhs"
+                ],
+                "doc": null
+            },
+            "__rimod__": {
+                "args": [
+                    "lhs"
+                ],
+                "doc": null
+            },
+            "__rimul__": {
+                "args": [
+                    "lhs"
+                ],
+                "doc": null
+            },
+            "__rmod__": {
+                "args": [
+                    "lhs"
+                ],
+                "doc": null
+            },
+            "__rmul__": {
+                "args": [
+                    "lhs"
+                ],
+                "doc": null
+            },
+            "__ror__": {
+                "args": [
+                    "lhs"
+                ],
+                "doc": null
+            },
+            "__rsub__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__rxor__": {
+                "args": [
+                    "lhs"
+                ],
+                "doc": null
+            },
+            "__sub__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__xor__": {
+                "args": [
+                    "x",
+                    "y"
+                ],
+                "doc": null
+            },
+            "checkNonRValue": {
+                "args": [],
+                "doc": null
+            },
+            "getDestAddr": {
+                "args": [],
+                "doc": null
+            },
+            "getMaskAddr": {
+                "args": [],
+                "doc": null
+            },
+            "getValueAddr": {
+                "args": [],
+                "doc": null
+            },
+            "makeL": {
+                "args": [],
+                "doc": null
+            },
+            "makeR": {
+                "args": [],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "ExprProxy": {
+        "methods": {
+            "__add__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__and__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__bool__": {
+                "args": [],
+                "doc": null
+            },
+            "__call__": {
+                "args": [],
+                "doc": null
+            },
+            "__eq__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__floordiv__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__ge__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__getattr__": {
+                "args": [
+                    "name"
+                ],
+                "doc": null
+            },
+            "__getattribute__": {
+                "args": [
+                    "name"
+                ],
+                "doc": null
+            },
+            "__getitem__": {
+                "args": [
+                    "name"
+                ],
+                "doc": null
+            },
+            "__gt__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__hash__": {
+                "args": [],
+                "doc": null
+            },
+            "__init__": {
+                "args": [
+                    "initval"
+                ],
+                "doc": null
+            },
+            "__invert__": {
+                "args": [],
+                "doc": null
+            },
+            "__le__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__lshift__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__lt__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__mul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__ne__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__neg__": {
+                "args": [],
+                "doc": null
+            },
+            "__or__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__radd__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rand__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rfloordiv__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rmul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__ror__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rsub__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rxor__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__setitem__": {
+                "args": [
+                    "name",
+                    "newvalue"
+                ],
+                "doc": null
+            },
+            "__sub__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__xor__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "getValue": {
+                "args": [],
+                "doc": null
+            },
+            "cast": {
+                "args": [
+                    "cls",
+                    "_from"
+                ],
+                "doc": null
+            }
+        },
+        "doc": " Class which can contain both ConstExpr and EUDVariable "
+    },
+    "Forward": {
+        "methods": {
+            "Evaluate": {
+                "args": [],
+                "doc": null
+            },
+            "IsSet": {
+                "args": [],
+                "doc": null
+            },
+            "Reset": {
+                "args": [],
+                "doc": null
+            },
+            "__add__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__call__": {
+                "args": [],
+                "doc": null
+            },
+            "__floordiv__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__getattr__": {
+                "args": [
+                    "name"
+                ],
+                "doc": null
+            },
+            "__getitem__": {
+                "args": [
+                    "name"
+                ],
+                "doc": null
+            },
+            "__init__": {
+                "args": [],
+                "doc": null
+            },
+            "__lshift__": {
+                "args": [
+                    "expr"
+                ],
+                "doc": null
+            },
+            "__mod__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__mul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__neg__": {
+                "args": [],
+                "doc": null
+            },
+            "__radd__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__rmul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rsub__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__setitem__": {
+                "args": [
+                    "name",
+                    "newvalue"
+                ],
+                "doc": null
+            },
+            "__sub__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            }
+        },
+        "doc": "Class for forward definition.\n    "
+    },
+    "PVariable": {
+        "methods": {
+            "__add__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__and__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__bool__": {
+                "args": [],
+                "doc": null
+            },
+            "__call__": {
+                "args": [],
+                "doc": null
+            },
+            "__eq__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__floordiv__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__ge__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__getattr__": {
+                "args": [
+                    "name"
+                ],
+                "doc": null
+            },
+            "__getattribute__": {
+                "args": [
+                    "name"
+                ],
+                "doc": null
+            },
+            "__getitem__": {
+                "args": [
+                    "i"
+                ],
+                "doc": null
+            },
+            "__gt__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__hash__": {
+                "args": [],
+                "doc": null
+            },
+            "__init__": {
+                "args": [
+                    "initvars"
+                ],
+                "doc": null
+            },
+            "__invert__": {
+                "args": [],
+                "doc": null
+            },
+            "__iter__": {
+                "args": [],
+                "doc": null
+            },
+            "__le__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__lshift__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__lt__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__mul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__ne__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__neg__": {
+                "args": [],
+                "doc": null
+            },
+            "__or__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__radd__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rand__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rfloordiv__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rmul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__ror__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rsub__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rxor__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__setitem__": {
+                "args": [
+                    "i",
+                    "value"
+                ],
+                "doc": null
+            },
+            "__sub__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__xor__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "_consteudset": {
+                "args": [
+                    "i",
+                    "value"
+                ],
+                "doc": null
+            },
+            "_constget": {
+                "args": [
+                    "i"
+                ],
+                "doc": null
+            },
+            "_constset": {
+                "args": [
+                    "i",
+                    "value"
+                ],
+                "doc": null
+            },
+            "_eudget": {
+                "args": [
+                    "i"
+                ],
+                "doc": null
+            },
+            "_eudset": {
+                "args": [
+                    "i",
+                    "value"
+                ],
+                "doc": null
+            },
+            "_get": {
+                "args": [
+                    "i"
+                ],
+                "doc": null
+            },
+            "_set": {
+                "args": [
+                    "i",
+                    "value"
+                ],
+                "doc": null
+            },
+            "fill": {
+                "args": [
+                    "values"
+                ],
+                "doc": null
+            },
+            "get": {
+                "args": [
+                    "i"
+                ],
+                "doc": null
+            },
+            "getValue": {
+                "args": [],
+                "doc": null
+            },
+            "set": {
+                "args": [
+                    "i",
+                    "value"
+                ],
+                "doc": null
+            },
+            "cast": {
+                "args": [
+                    "cls",
+                    "_from"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "RawTrigger": {
+        "methods": {
+            "CollectDependency": {
+                "args": [
+                    "pbuffer"
+                ],
+                "doc": null
+            },
+            "DynamicConstructed": {
+                "args": [],
+                "doc": " Whether function is constructed dynamically.\n\n        Dynamically constructed EUDObject may have their dependency list\n        generated during object construction. So their dependency list is\n        re-examined before allocation phase.\n        "
+            },
+            "Evaluate": {
+                "args": [],
+                "doc": "\n        What this object should be evaluated to when used in eudplib program.\n\n        :return: Default) Memory address of this object.\n\n        .. note::\n            In overriding this method, you can use\n            :func:`eudplib.GetObjectAddr`.\n        "
+            },
+            "GetDataSize": {
+                "args": [],
+                "doc": null
+            },
+            "GetNextPtrMemory": {
+                "args": [],
+                "doc": null
+            },
+            "WritePayload": {
+                "args": [
+                    "pbuffer"
+                ],
+                "doc": null
+            },
+            "__add__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__floordiv__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__init__": {
+                "args": [
+                    "prevptr",
+                    "nextptr",
+                    "conditions",
+                    "actions"
+                ],
+                "doc": null
+            },
+            "__mod__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__mul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__neg__": {
+                "args": [],
+                "doc": null
+            },
+            "__radd__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__rmul__": {
+                "args": [
+                    "k"
+                ],
+                "doc": null
+            },
+            "__rsub__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__sub__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "RlocInt_C": {
+        "methods": {
+            "__add__": {
+                "args": [
+                    "lhs",
+                    "rhs"
+                ],
+                "doc": null
+            },
+            "__floordiv__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__init__": {
+                "args": [
+                    "offset",
+                    "rlocmode"
+                ],
+                "doc": null
+            },
+            "__mul__": {
+                "args": [
+                    "other"
+                ],
+                "doc": null
+            },
+            "__repr__": {
+                "args": [],
+                "doc": null
+            },
+            "__str__": {
+                "args": [],
+                "doc": null
+            },
+            "__sub__": {
+                "args": [
+                    "lhs",
+                    "rhs"
+                ],
+                "doc": null
+            }
+        },
+        "doc": "Relocatable int"
+    },
+    "StringBuffer": {
+        "methods": {
+            "Display": {
+                "args": [],
+                "doc": null
+            },
+            "DisplayAt": {
+                "args": [
+                    "line"
+                ],
+                "doc": null
+            },
+            "Play": {
+                "args": [],
+                "doc": null
+            },
+            "__init__": {
+                "args": [
+                    "content"
+                ],
+                "doc": "Constructor for StringBuffer\n\n        :param content: Initial StringBuffer content / capacity. Capacity of\n            StringBuffer is determined by size of this. If content is integer, then\n            initial capacity and content of StringBuffer will be set to\n            content(int) and empty string.\n\n        :type content: str, bytes, int\n        "
+            },
+            "append": {
+                "args": [],
+                "doc": null
+            },
+            "appendf": {
+                "args": [
+                    "format_string"
+                ],
+                "doc": null
+            },
+            "delete": {
+                "args": [
+                    "start",
+                    "length"
+                ],
+                "doc": null
+            },
+            "fadeIn": {
+                "args": [],
+                "doc": null
+            },
+            "fadeInf": {
+                "args": [
+                    "format_string"
+                ],
+                "doc": null
+            },
+            "fadeOut": {
+                "args": [],
+                "doc": null
+            },
+            "fadeOutf": {
+                "args": [
+                    "format_string"
+                ],
+                "doc": null
+            },
+            "insert": {
+                "args": [
+                    "index"
+                ],
+                "doc": null
+            },
+            "insertf": {
+                "args": [
+                    "index",
+                    "format_string"
+                ],
+                "doc": null
+            },
+            "length": {
+                "args": [],
+                "doc": null
+            },
+            "print": {
+                "args": [],
+                "doc": null
+            },
+            "printAt": {
+                "args": [
+                    "line"
+                ],
+                "doc": null
+            },
+            "printf": {
+                "args": [
+                    "format_string"
+                ],
+                "doc": null
+            },
+            "printfAt": {
+                "args": [
+                    "line",
+                    "format_string"
+                ],
+                "doc": null
+            },
+            "CPBranch": {
+                "args": [
+                    "cls"
+                ],
+                "doc": null
+            },
+            "_init_template": {
+                "args": [
+                    "cls"
+                ],
+                "doc": null
+            }
+        },
+        "doc": "Object for storing single modifiable string.\n\n    Manipluating STR section is easy. :)\n    You can do anything you would do with normal string with StringBuffer.\n    "
+    },
+    "TBL": {
+        "methods": {
+            "AddString": {
+                "args": [
+                    "string"
+                ],
+                "doc": null
+            },
+            "ForceAddString": {
+                "args": [
+                    "string"
+                ],
+                "doc": null
+            },
+            "GetString": {
+                "args": [
+                    "index"
+                ],
+                "doc": null
+            },
+            "GetStringIndex": {
+                "args": [
+                    "string"
+                ],
+                "doc": null
+            },
+            "LoadTBL": {
+                "args": [
+                    "content"
+                ],
+                "doc": null
+            },
+            "LoadTBLWithChk": {
+                "args": [
+                    "content",
+                    "init_chkt"
+                ],
+                "doc": null
+            },
+            "SaveTBL": {
+                "args": [],
+                "doc": null
+            },
+            "__init__": {
+                "args": [
+                    "content",
+                    "init_chkt",
+                    "load_entry",
+                    "save_entry"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "TracebackType": {
+        "methods": {},
+        "doc": "TracebackType(tb_next, tb_frame, tb_lasti, tb_lineno)\n--\n\nCreate a new traceback object."
+    },
+    "TrgAIScript": {
+        "methods": {
+            "cast": {
+                "args": [
+                    "s"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "TrgAllyStatus": {
+        "methods": {
+            "cast": {
+                "args": [
+                    "s"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "TrgComparison": {
+        "methods": {
+            "cast": {
+                "args": [
+                    "s"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "TrgCount": {
+        "methods": {
+            "cast": {
+                "args": [
+                    "s"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "TrgLocation": {
+        "methods": {
+            "cast": {
+                "args": [
+                    "s"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "TrgModifier": {
+        "methods": {
+            "cast": {
+                "args": [
+                    "s"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "TrgOrder": {
+        "methods": {
+            "cast": {
+                "args": [
+                    "s"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "TrgPlayer": {
+        "methods": {
+            "cast": {
+                "args": [
+                    "s"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "TrgPropState": {
+        "methods": {
+            "cast": {
+                "args": [
+                    "s"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "TrgProperty": {
+        "methods": {
+            "cast": {
+                "args": [
+                    "s"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "TrgResource": {
+        "methods": {
+            "cast": {
+                "args": [
+                    "s"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "TrgScore": {
+        "methods": {
+            "cast": {
+                "args": [
+                    "s"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "TrgString": {
+        "methods": {
+            "cast": {
+                "args": [
+                    "s"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "TrgSwitch": {
+        "methods": {
+            "cast": {
+                "args": [
+                    "s"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "TrgSwitchAction": {
+        "methods": {
+            "cast": {
+                "args": [
+                    "s"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "TrgSwitchState": {
+        "methods": {
+            "cast": {
+                "args": [
+                    "s"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "TrgTBL": {
+        "methods": {
+            "cast": {
+                "args": [
+                    "s"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "TrgUnit": {
+        "methods": {
+            "cast": {
+                "args": [
+                    "s"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "UnitProperty": {
+        "methods": {
+            "__init__": {
+                "args": [
+                    "hitpoint",
+                    "shield",
+                    "energy",
+                    "resource",
+                    "hanger",
+                    "cloaked",
+                    "burrowed",
+                    "intransit",
+                    "hallucinated",
+                    "invincible"
+                ],
+                "doc": "\n        Properties : Value/None (Don't care)\n\n        - hitpoint : 0~100(%)  if) When unit's hitpoint is greater than 167772,\n        - shield   : 0~100(%)   you should give hitpoint None to make 100%% HP.\n        - energy   : 0~100(%)\n        - resource : 0~4294967295\n        - hanger   : 0~65536 (Count)\n\n        Special properties : True(Enabled)/False(Disabled)/None(Don't care)\n\n        - clocked      : Unit is clocked.\n        - burrowed     : Unit is burrowed.\n        - intransit    : Unit is lifted. (In transit)\n        - hallucinated : Unit is hallucination.\n        - invincible   : Unit is invincible.\n\n        >>> UnitProperty(hitpoint = 50, burrowed = True) # HP 50%, burrowed\n        "
+            }
+        },
+        "doc": "\n    UnitProperty class. Used in 'Create Unit with Properties' action.\n    "
+    },
+    "epd2s": {
+        "methods": {
+            "__init__": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "hptr": {
+        "methods": {
+            "__init__": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "ptr2s": {
+        "methods": {
+            "__init__": {
+                "args": [
+                    "value"
+                ],
+                "doc": null
+            }
+        },
+        "doc": null
+    },
+    "selftype": {
+        "methods": {
+            "cast": {
+                "args": [
+                    "_from"
+                ],
+                "doc": null
+            }
+        },
+        "doc": " When used in EUDFuncMethod's type declaration, This is interpreted\n    as the owning class itself\n    "
+    }
+}{
+    "DisplayTextAt": {
+        "args": [
+            "line",
+            "text"
+        ],
+        "docs": null
+    },
+    "GetMapStringAddr": {
+        "args": [
+            "strId"
+        ],
+        "docs": null
+    },
+    "GetTBLAddr": {
+        "args": [
+            "tblId"
+        ],
+        "docs": null
+    },
+    "QueueGameCommand": {
+        "args": [
+            "data",
+            "size"
+        ],
+        "docs": "Queue game command to packet queue.\n\n    Starcraft periodically broadcasts game packets to other player. Game\n    packets are stored to queue, and this function add data to that queue, so\n    that SC can broadcast it.\n\n    :param data: Data to put in queue\n    :param size: Size of data\n\n    .. note::\n        If packet queue is full, this function fails. This behavior is silent\n        without any warning or error, since this behavior shouldn't happen in\n        common situations. So **Don't use this function too much in a frame.**\n\n    "
+    },
+    "QueueGameCommand_MergeArchon": {
+        "args": [],
+        "docs": null
+    },
+    "QueueGameCommand_MergeDarkArchon": {
+        "args": [],
+        "docs": null
+    },
+    "QueueGameCommand_MinimapPing": {
+        "args": [
+            "xy"
+        ],
+        "docs": "Queue minimap ping action.\n\n    :param xy: (y * 65536) + x, where (x, y) is coordinate for right click.\n    "
+    },
+    "QueueGameCommand_PauseGame": {
+        "args": [],
+        "docs": null
+    },
+    "QueueGameCommand_QueuedRightClick": {
+        "args": [
+            "xy"
+        ],
+        "docs": "Queue right click action.\n\n    :param xy: (y * 65536) + x, where (x, y) is coordinate for right click.\n    "
+    },
+    "QueueGameCommand_RestartGame": {
+        "args": [],
+        "docs": null
+    },
+    "QueueGameCommand_ResumeGame": {
+        "args": [],
+        "docs": null
+    },
+    "QueueGameCommand_RightClick": {
+        "args": [
+            "xy"
+        ],
+        "docs": "Queue right click action.\n\n    :param xy: (y * 65536) + x, where (x, y) is coordinate for right click.\n    "
+    },
+    "QueueGameCommand_Select": {
+        "args": [
+            "n",
+            "ptrList"
+        ],
+        "docs": null
+    },
+    "QueueGameCommand_TrainUnit": {
+        "args": [
+            "unit"
+        ],
+        "docs": null
+    },
+    "QueueGameCommand_UseCheat": {
+        "args": [
+            "flags"
+        ],
+        "docs": null
+    },
+    "RunTrigTrigger": {
+        "args": [],
+        "docs": null
+    },
+    "f_atan2": {
+        "args": [
+            "y",
+            "x"
+        ],
+        "docs": null
+    },
+    "f_bitsplit": {
+        "args": [
+            "a"
+        ],
+        "docs": "Splits bit of given number\n\n    :returns: int bits[32];  // bits[i] = (ith bit from LSB of a is set)\n    "
+    },
+    "f_bitxor": {
+        "args": [
+            "a",
+            "b"
+        ],
+        "docs": "Calculate a ^ b"
+    },
+    "f_blockpatch_epd": {
+        "args": [
+            "dstepd",
+            "srcepd",
+            "dwn"
+        ],
+        "docs": " Patch 4*dwn bytes of memory at dstepd with memory of srcepd.\n\n    .. note::\n        After calling this function, contents at srcepd memory may change.\n        Since new contents are required for :py:`f_unpatchall` to run, you\n        shouldn't use the memory for any other means.\n    "
+    },
+    "f_bread_epd": {
+        "args": [
+            "epd",
+            "subp"
+        ],
+        "docs": null
+    },
+    "f_cp949_to_utf8_cpy": {
+        "args": [
+            "dst",
+            "src"
+        ],
+        "docs": null
+    },
+    "f_cpchar_adddw": {
+        "args": [
+            "number"
+        ],
+        "docs": null
+    },
+    "f_cpstr_adddw": {
+        "args": [
+            "number"
+        ],
+        "docs": "Print number as string to CurrentPlayer.\n\n    :param number: DWORD to print\n    "
+    },
+    "f_cpstr_addptr": {
+        "args": [
+            "number"
+        ],
+        "docs": "Print number as string to CurrentPlayer.\n\n    :param number: DWORD to print\n    "
+    },
+    "f_read_epd_template": {
+        "args": [
+            "targetplayer"
+        ],
+        "docs": null
+    },
+    "f_dbstr_adddw": {
+        "args": [
+            "dst",
+            "number"
+        ],
+        "docs": "Print number as string to dst.\n\n    :param dst: Destination address (Not EPD player)\n    :param number: DWORD to print\n\n    :returns: dst + strlen(itoa(number))\n    "
+    },
+    "f_dbstr_addptr": {
+        "args": [
+            "dst",
+            "number"
+        ],
+        "docs": "Print number as string to dst.\n\n    :param dst: Destination address (Not EPD player)\n    :param number: DWORD to print\n\n    :returns: dst + strlen(itoa(number))\n    "
+    },
+    "f_dbstr_addstr": {
+        "args": [
+            "dst",
+            "src"
+        ],
+        "docs": "Print string as string to dst. Same as strcpy except of return value.\n\n    :param dst: Destination address (Not EPD player)\n    :param src: Source address (Not EPD player)\n\n    :returns: dst + strlen(src)\n    "
+    },
+    "f_dbstr_addstr_epd": {
+        "args": [
+            "dst",
+            "epd"
+        ],
+        "docs": "Print string as string to dst. Same as strcpy except of return value.\n\n    :param dst: Destination address (Not EPD player)\n    :param epd: Source EPD player\n\n    :returns: dst + strlen_epd(epd)\n    "
+    },
+    "f_dwbreak": {
+        "args": [
+            "number"
+        ],
+        "docs": "Get hiword/loword/4byte of dword"
+    },
+    "f_dwbreak2": {
+        "args": [
+            "number"
+        ],
+        "docs": "Get hiword/loword/4byte of dword"
+    },
+    "f_dwepdread_epd": {
+        "args": [
+            "targetplayer"
+        ],
+        "docs": null
+    },
+    "f_dwpatch_epd": {
+        "args": [
+            "dstepd",
+            "value"
+        ],
+        "docs": null
+    },
+    "f_dwrand": {
+        "args": [],
+        "docs": null
+    },
+    "f_dwread_epd": {
+        "args": [
+            "targetplayer"
+        ],
+        "docs": null
+    },
+    "f_getcurpl": {
+        "args": [],
+        "docs": "Get current player value.\n\n    eudplib internally caches the current player value, so this function uses\n    that value if the value is valid. Otherwise, update the current player\n    cache and return it.\n    "
+    },
+    "f_getgametick": {
+        "args": [],
+        "docs": "Get current game tick value."
+    },
+    "f_gettextptr": {
+        "args": [],
+        "docs": null
+    },
+    "f_lengthdir": {
+        "args": [
+            "length",
+            "angle"
+        ],
+        "docs": null
+    },
+    "f_memcmp": {
+        "args": [
+            "buf1",
+            "buf2",
+            "count"
+        ],
+        "docs": null
+    },
+    "f_memcpy": {
+        "args": [
+            "dst",
+            "src",
+            "copylen"
+        ],
+        "docs": null
+    },
+    "f_playerexist": {
+        "args": [
+            "player"
+        ],
+        "docs": "Check if player has not left the game.\n\n    :returns: 1 if player exists, 0 if not.\n    "
+    },
+    "f_raise_CCMU": {
+        "args": [
+            "player"
+        ],
+        "docs": null
+    },
+    "f_rand": {
+        "args": [],
+        "docs": null
+    },
+    "f_randomize": {
+        "args": [],
+        "docs": null
+    },
+    "f_repmovsd_epd": {
+        "args": [
+            "dstepdp",
+            "srcepdp",
+            "copydwn"
+        ],
+        "docs": null
+    },
+    "f_sqrt": {
+        "args": [
+            "n"
+        ],
+        "docs": null
+    },
+    "f_strcmp": {
+        "args": [
+            "s1",
+            "s2"
+        ],
+        "docs": null
+    },
+    "f_strcpy": {
+        "args": [
+            "dst",
+            "src"
+        ],
+        "docs": "\n    Strcpy equivilant in eudplib. Copy C-style string.\n\n    :param dst: Destination address (Not EPD player)\n    :param src: Source address (Not EPD player)\n\n    :return: dst\n    "
+    },
+    "f_strlen": {
+        "args": [
+            "src"
+        ],
+        "docs": null
+    },
+    "f_strlen_epd": {
+        "args": [
+            "epd"
+        ],
+        "docs": null
+    },
+    "f_strnstr": {
+        "args": [
+            "string",
+            "substring",
+            "count"
+        ],
+        "docs": null
+    },
+    "f_unpatchall": {
+        "args": [],
+        "docs": null
+    },
+    "f_wread_epd": {
+        "args": [
+            "epd",
+            "subp"
+        ],
+        "docs": null
+    }
+}
